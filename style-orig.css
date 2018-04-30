@@ -1,0 +1,113 @@
+/**
+Theme Name: Kanata Cafe
+Author: Michael Irvine
+Author URI: https://michaelirvinedesign.ca/
+Description: Child theme developed for Kanata Cafe Japan
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kanata-cafe
+Template: astra
+*/
+
+
+/* ____________CUSTOM FONTS_____________________ */
+
+
+/*  font-family: "Noto Sans", "Noto Sans Japanese", sans-serif; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ____________HEADER_____________________ */
+
+
+.main-header-bar {
+    padding: 0;
+    border: none;
+}
+
+
+/* ______________SITE BRANDING____________ */
+
+.site-branding {
+    position: absolute;
+    top: 0px;
+}
+
+
+
+
+/* ________MAIN MENU_____________ */
+
+.ast-main-header-bar-alignment {
+     position: absolute;
+    top: 1px;
+    right: 1px;
+}
+
+
+
+
+
+
+
+/* ________FRONT PAGE HERO IMAGES_____________ */
+
+.hero-wrap {
+    height: 100vh;
+    width: 100%;
+    background: #FFF;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: flex-end;
+}
+
+.hero-left {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
+    border: 1em solid #FFF;
+    border-right: 0;
+}
+
+.hero-right {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px auto;
+  height: 100vh;
+  width: 50%;
+  border: 1em solid #FFF;
+  border-left: 0;
+}
+
+
+
+/* ________FRONT PAGE MAIN CONTENT_____________ */
+
+.site-content {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+
+    background-color: #FFF;
+}
+
+.change-to-pink {
+    background-color: #F7D7DA;
+}

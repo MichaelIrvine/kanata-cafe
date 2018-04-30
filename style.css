@@ -1,0 +1,15 @@
+/**
+Theme Name: Kanata Cafe
+Author: Michael Irvine
+Author URI: https://michaelirvinedesign.ca/
+Description: Child theme developed for Kanata Cafe Japan
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kanata-cafe
+Template: astra
+*/
+body {
+  background: blue; }
+
+/*# sourceMappingURL=style.css.map */
