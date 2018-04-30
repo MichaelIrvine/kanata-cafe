@@ -29,6 +29,7 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
 function kanata_child_scripts() {
 	wp_enqueue_script('jquery');
+	wp_register_script('jquery.waypoints', get_template_directory_uri() . '/js/waypoints/lib/jquery.waypoints.min.js',array('jquery'));
 	wp_enqueue_script( 'kanata_script', get_stylesheet_directory_uri() . '/js/kanata-script.js', array(), '1.0', true );
 }
 

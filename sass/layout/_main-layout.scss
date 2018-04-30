@@ -1,0 +1,74 @@
+
+
+/* ____________HEADER_____________________ */
+
+
+.main-header-bar {
+    padding: 0;
+    border: none;
+}
+
+
+/* ______________SITE BRANDING____________ */
+
+.site-branding {
+    position: absolute;
+    top: 0px;
+}
+
+
+/* ________MAIN MENU_____________ */
+
+.ast-main-header-bar-alignment {
+     position: absolute;
+    top: 1px;
+    right: 1px;
+}
+
+
+/* ________FRONT PAGE HERO IMAGES_____________ */
+
+.hero-wrap {
+    height: 100vh;
+    width: 100%;
+    background: #FFF;
+    display: flex;
+    flex-wrap: no-wrap;
+    margin-top: 50px;
+}
+
+.hero-left {
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 400px auto;
+    height: 100vh;
+    width: 50%;
+    border: 1em solid #FFF;
+    border-right: 0;
+}
+
+.hero-right {
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 500px auto;
+  height: 100vh;
+  width: 50%;
+  border: 1em solid #FFF;
+  border-left: 0;
+}
+
+
+
+/* ________FRONT PAGE MAIN CONTENT_____________ */
+
+.site-content {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+
+    background-color: #FFF;
+}
+
+.change-to-pink {
+    background-color: #F7D7DA;
+}

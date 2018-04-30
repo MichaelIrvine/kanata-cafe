@@ -11,6 +11,8 @@ Template: astra
 */
 
 
-body {
-    background: blue;
-}
+@import "layout/main-layout";
+
+@import "navigation/menus";
+
+@import "variables/variables";
