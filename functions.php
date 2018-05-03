@@ -21,7 +21,9 @@ function child_enqueue_styles() {
 	wp_enqueue_style( 'kanata-cafe-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_KANATA_CAFE_VERSION, 'all' );
 	
 	// Add Fonts for Japanese Script - Google Fonts Early access
-	wp_enqueue_style('kanata-googlefonts', 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet"' );
+	wp_enqueue_style('kanata-googlefonts', 'https://fonts.googleapis.com/css?family=Noto+Sans' );
+	wp_enqueue_style('kanata-googlefonts-japanese', 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
@@ -29,8 +31,8 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
 function kanata_child_scripts() {
 	wp_enqueue_script('jquery');
-	wp_register_script('jquery.waypoints', get_template_directory_uri() . '/js/waypoints/lib/jquery.waypoints.min.js',array('jquery'));
-	wp_enqueue_script( 'kanata_script', get_stylesheet_directory_uri() . '/js/kanata-script.js', array(), '1.0', true );
+	wp_enqueue_script( 'waypoints', get_stylesheet_directory_uri() . '/js/waypoints/lib/jquery.waypoints.min.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'kanata_script', get_stylesheet_directory_uri() . '/js/kanata-script.js', array('jquery','waypoints'), '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'kanata_child_scripts' );

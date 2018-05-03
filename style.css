@@ -9,6 +9,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kanata-cafe
 Template: astra
 */
+body {
+  background: #68191e; }
+
 /* ____________HEADER_____________________ */
 .main-header-bar {
   padding: 0;
@@ -16,12 +19,12 @@ Template: astra
 
 /* ______________SITE BRANDING____________ */
 .site-branding {
-  position: absolute;
+  position: fixed;
   top: 0px; }
 
 /* ________MAIN MENU_____________ */
 .ast-main-header-bar-alignment {
-  position: absolute;
+  position: fixed;
   top: 1px;
   right: 1px; }
 
@@ -31,35 +34,52 @@ Template: astra
   width: 100%;
   background: #FFF;
   display: flex;
-  flex-wrap: no-wrap;
-  margin-top: 50px; }
+  flex-wrap: nowrap;
+  transition: all 3s ease; }
 
 .hero-left {
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: top left;
   background-size: 400px auto;
+  margin-top: 70px;
   height: 100vh;
-  width: 50%;
-  border: 1em solid #FFF;
-  border-right: 0; }
+  width: 50%; }
 
 .hero-right {
   background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 500px auto;
+  background-position: left center;
+  background-size: 400px auto;
+  margin-top: 70px;
   height: 100vh;
-  width: 50%;
-  border: 1em solid #FFF;
-  border-left: 0; }
+  width: 50%; }
 
 /* ________FRONT PAGE MAIN CONTENT_____________ */
 .site-content {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: #FFF; }
+  background-color: #FFF;
+  transition: all 3s ease; }
 
 .change-to-pink {
   background-color: #F7D7DA; }
+
+.main-header-menu li:hover > a {
+  color: #68191e; }
+
+.main-header-menu a {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 3px; }
+
+.main-header-menu li:hover > a {
+  color: #68191e; }
+
+.main-header-menu a {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 3px; }
 
 /*# sourceMappingURL=style.css.map */
