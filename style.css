@@ -22,17 +22,10 @@ body {
   position: fixed;
   top: 0px; }
 
-/* ________MAIN MENU_____________ */
-.ast-main-header-bar-alignment {
-  position: fixed;
-  top: 1px;
-  right: 1px; }
-
 /* ________FRONT PAGE HERO IMAGES_____________ */
 .hero-wrap {
   height: 100vh;
   width: 100%;
-  background: #FFF;
   display: flex;
   flex-wrap: nowrap;
   transition: all 3s ease; }
@@ -40,18 +33,35 @@ body {
 .hero-left {
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: 400px auto;
-  margin-top: 70px;
+  background-size: cover;
   height: 100vh;
   width: 50%; }
 
 .hero-right {
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 400px auto;
-  margin-top: 70px;
+  background-position: top right;
+  background-size: cover;
   height: 100vh;
   width: 50%; }
+
+.big-text-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background: transparent;
+  position: absolute;
+  right: 100px;
+  top: 215px; }
+  .big-text-container .fp_english_big,
+  .big-text-container .fp_japanese_big {
+    color: #FFF;
+    font-family: "Noto Sans Japanese";
+    font-size: 6em;
+    font-size: 15em;
+    font-weight: 1000;
+    text-transform: uppercase;
+    line-height: 0.9; }
 
 /* ________FRONT PAGE MAIN CONTENT_____________ */
 .site-content {
@@ -64,22 +74,130 @@ body {
 .change-to-pink {
   background-color: #F7D7DA; }
 
+/* ________MAIN MENU_____________ */
+/* --------- Reset Astra settings menu items ----- */
 .main-header-menu li:hover > a {
-  color: #68191e; }
+  color: #FFF; }
 
+.main-header-menu ul {
+  background: transparent; }
+
+.submenu-with-border ul {
+  border-top: none; }
+
+.submenu-with-border ul a {
+  border: none;
+  border-left: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke; }
+
+/* --------- ^^^^Reset Astra settings menu items^^^^ ----- */
+.ast-main-header-bar-alignment {
+  position: absolute;
+  top: 20px;
+  right: 10px; }
+
+.main-header-bar {
+  line-height: 1.5; }
+
+.menu-item-12:after,
+.menu-item-13:after,
+.menu-item-14:after,
+.menu-item-15:after,
+.menu-item-27:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #FFF;
+  transition: all 0.6s ease;
+  margin: 5px 14px;
+  transition: all 0.5s ease-in; }
+
+@keyframes menuBounce {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(10px); } }
 .main-header-menu a {
   font-family: 'Noto Sans', sans-serif;
   font-size: 0.9em;
   font-weight: 300;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  color: #fff; }
 
+.ast-mobile-menu-buttons {
+  position: fixed;
+  top: 50px;
+  right: 50px; }
+
+.ast-button-wrap .menu-toggle.main-header-menu-toggle {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #666666; }
+
+/* ________MAIN MENU_____________ */
+/* --------- Reset Astra settings menu items ----- */
 .main-header-menu li:hover > a {
-  color: #68191e; }
+  color: #FFF; }
 
+.main-header-menu ul {
+  background: transparent; }
+
+.submenu-with-border ul {
+  border-top: none; }
+
+.submenu-with-border ul a {
+  border: none;
+  border-left: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke; }
+
+/* --------- ^^^^Reset Astra settings menu items^^^^ ----- */
+.ast-main-header-bar-alignment {
+  position: absolute;
+  top: 20px;
+  right: 10px; }
+
+.main-header-bar {
+  line-height: 1.5; }
+
+.menu-item-12:after,
+.menu-item-13:after,
+.menu-item-14:after,
+.menu-item-15:after,
+.menu-item-27:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #FFF;
+  transition: all 0.6s ease;
+  margin: 5px 14px;
+  transition: all 0.5s ease-in; }
+
+@keyframes menuBounce {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(10px); } }
 .main-header-menu a {
   font-family: 'Noto Sans', sans-serif;
   font-size: 0.9em;
   font-weight: 300;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  color: #fff; }
+
+.ast-mobile-menu-buttons {
+  position: fixed;
+  top: 50px;
+  right: 50px; }
+
+.ast-button-wrap .menu-toggle.main-header-menu-toggle {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #666666; }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,31 +19,22 @@ body {
 }
 
 
-/* ________MAIN MENU_____________ */
-
-.ast-main-header-bar-alignment {
-    position: fixed;
-    top: 1px;
-    right: 1px;
-}
-
 
 /* ________FRONT PAGE HERO IMAGES_____________ */
 
 .hero-wrap {
     height: 100vh;
     width: 100%;
-    background: #FFF;
     display: flex;
     flex-wrap: nowrap;
     transition: all 3s ease;
+    
 }
 
 .hero-left {
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 400px auto;
-    margin-top: 70px;
+    background-size: cover;
     height: 100vh;
     width: 50%;
 
@@ -51,14 +42,36 @@ body {
 
 .hero-right {
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 400px auto;
-  margin-top: 70px;
+  background-position: top right;
+  background-size: cover;
   height: 100vh;
   width: 50%;
 
 }
 
+
+.big-text-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    background: transparent;
+    position: absolute;
+    right: 100px;
+    top: 215px;
+
+    .fp_english_big,
+    .fp_japanese_big, {
+        color: #FFF;
+        font-family: "Noto Sans Japanese";
+        font-size: 6em;
+        font-size: 15em;
+        font-weight: 1000;
+        text-transform: uppercase;
+        line-height: 0.9;
+    }
+
+}
 
 
 /* ________FRONT PAGE MAIN CONTENT_____________ */
