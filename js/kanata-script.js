@@ -11,6 +11,7 @@ $('#content').waypoint(function(direction){
     }
 }, {offset: '45%'});
 
+
 });
 
 

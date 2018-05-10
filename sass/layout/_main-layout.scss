@@ -10,12 +10,20 @@ body {
     border: none;
 }
 
+// Reset from original Astra theme
+.ast-header-break-point .main-header-bar {
+    padding: 0;
+}
 
 /* ______________SITE BRANDING____________ */
 
 .site-branding {
     position: fixed;
     top: 0px;
+
+    @media screen and (max-width: 500px) {
+        position: absolute;
+    }
 }
 
 
@@ -38,7 +46,21 @@ body {
     height: 100vh;
     width: 50%;
 
+        @media screen and ( max-width: 700px ){
+                background-size: 600px auto;
+                background-position: 60% 0;
+                border: 3vw solid #ffffff;
+                border-right: 0;
+              }
+        
+        @media screen and ( max-width: 500px ){
+                width: 100%;
+                background-size: cover;
+                background-position: 60% 0;
+                border: 3vw solid #ffffff;
+            }
 }
+
 
 .hero-right {
   background-repeat: no-repeat;
@@ -47,6 +69,16 @@ body {
   height: 100vh;
   width: 50%;
 
+        @media screen and ( max-width: 700px ){
+                background-size: 600px auto;
+                background-position: 60% 0;
+                border: 3vw solid #ffffff;
+                border-left: 0;
+            }
+        
+        @media screen and ( max-width: 500px ){
+                display: none;
+            }
 }
 
 
@@ -60,15 +92,20 @@ body {
     right: 100px;
     top: 215px;
 
+    @media screen and ( max-width: 670px ){
+        display: none;
+    }
+
+
     .fp_english_big,
     .fp_japanese_big, {
         color: #FFF;
         font-family: "Noto Sans Japanese";
-        font-size: 6em;
-        font-size: 15em;
+        font-size: 18vw;
         font-weight: 1000;
         text-transform: uppercase;
         line-height: 0.9;
+
     }
 
 }
