@@ -20,6 +20,7 @@ get_header(); ?>
 <?php 
 
 $images = get_field('gallery');
+$size   = 'large';
 
 if( $images ): ?>
     <div id="slider" class="slider">

@@ -26,8 +26,8 @@
 			</div><!-- Main Header Container -->
 		</div><!-- ast-row -->
 		<?php astra_main_header_bar_bottom(); ?>
-					<?php
-
+			<?php
+			if (is_front_page()){
 				if (function_exists('get_field')){
 
 					$imageLeft   = get_field('cover_left');
@@ -55,8 +55,10 @@ else :
     // no rows found
 
 endif;
-				} //This closes the above IF statement
-			?>
+	} //This closes the above IF statement
+			
+	}//ends the check for Front Page
+?>
 
 
 

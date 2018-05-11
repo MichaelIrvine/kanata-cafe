@@ -40,17 +40,16 @@ add_action( 'wp_enqueue_scripts', 'kanata_child_scripts' );
 
 function kanata_gallery_scripts() {
 		
+    	wp_enqueue_style('kanata-slicktheme', get_stylesheet_directory_uri() . '/slick/slick-theme.css');
 
-    	wp_enqueue_style('kanata-slicktheme', get_template_directory_uri() . 'node_modules/slick-carousel/slick/slick-theme.css');
-
-    	wp_enqueue_style('kanata-slick', get_template_directory_uri() . 'node_modules/slick-carousel/slick/slick.css');
+    	wp_enqueue_style('kanata-slick', get_stylesheet_directory_uri() . '/slick/slick.css');
     		
-    	wp_enqueue_script('kanata-slickjs', get_template_directory_uri().'node_modules/slick-carousel/slick/slick.min.js', array('jquery'), '1', true);
+    	wp_enqueue_script('kanata-slickjs', get_stylesheet_directory_uri().'/slick/slick.min.js', array('jquery'), '1', true);
 
-    	wp_enqueue_script('kanata-slicksettings', get_template_directory_uri() . 'node_modules/slick-carousel/slick/slicksettings.js', array('kanata-slickjs'), '1', true);
-
+    	wp_enqueue_script('kanata-slicksettings', get_stylesheet_directory_uri() . '/js/slicksettings.js', array('kanata-slickjs'), '1', true);
 }
 
+add_action( 'wp_enqueue_scripts', 'kanata_gallery_scripts' );
 
 
 /* ---------- Add Custom Image Sizes ----------------------- */
