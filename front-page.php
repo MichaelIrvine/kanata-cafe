@@ -16,15 +16,71 @@
 get_header(); ?>
 
 
-	<div id="primary" <?php astra_primary_class(); ?>>
+<div id="primary" <?php astra_primary_class(); ?>>
+<?php
+	echo '<section class="intro-text-container">';
+			// check if the repeater field has rows of data
+		if( have_rows('front_page_intro') ):
+				// loop through the rows of data
+    			while ( have_rows('front_page_intro') ) : the_row();
+					// display a sub field value
+					echo '<div class="intro_english">';
+						echo '<p>';the_sub_field('intro_english'); echo '</p>';
+						echo '</div>';
+						echo '<div class="intro_japanese">';
+						echo '<p>';the_sub_field('intro_japanese'); echo '</p>';
+						echo '</div>';
+					echo '</section>';
+				endwhile;
+			else : // no rows found
 
-		<?php astra_primary_content_top(); ?>
+		endif;
 
-		<?php astra_content_page_loop(); ?>
+?>
 
-		<?php astra_primary_content_bottom(); ?>
+<section class="icon-container">
+<?php 
 
-	</div><!-- #primary -->
+if( have_rows('front_page_links') ): ?>
+
+	<ul class="icons">
+
+	<?php while( have_rows('front_page_links') ): the_row(); 
+
+		// vars
+		$icon 	 = get_sub_field('icon_svg', 'option');
+		$content = get_sub_field('link_title');
+		$link 	 = get_sub_field('page_link');
+		
+
+		?>
+
+		<li class="icon-links">
+
+			<?php if( $link ): ?>
+				<a href="<?php echo $link; ?>">
+			<?php endif; ?>
+
+				<?php echo file_get_contents( $icon );?>
+
+
+			<?php if( $link ): ?>
+				</a>
+			<?php endif; ?>
+
+		    <h3><?php echo $content; ?></h3>
+
+		</li>
+
+	<?php endwhile; ?>
+
+	</ul>
+</section>
+<?php endif; ?>
+
+
+
+</div><!-- #primary -->
 
 
 <?php get_footer(); ?>
