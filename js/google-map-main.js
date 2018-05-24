@@ -1,73 +1,4 @@
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package Astra
- * @since 1.0.0
- */
-
-get_header(); ?>
-
- <!-- Left column - Contact Info -->
-<section class="contact-col-1">
-<?php
-
-// check if the flexible content field has rows of data
-if( have_rows('contact') ):
-
-     // loop through the rows of data
-    while ( have_rows('contact') ) : the_row();
-		echo '<div class="contact-details">';
-        if( get_row_layout() == 'contact_details' ):
-
-			echo '<h3 class="contact-phone-number">' . the_sub_field('contact_phone_number') . '</h3>';
-			echo '<h3 class="contact-email">' . the_sub_field('contact_email_address') . '</h3>';
-			echo '<h3 class="contact-address">' . the_sub_field('contact_address') . '</h3>';
-			
-
-        // elseif( get_row_layout() == 'download' ): 
-
-        // 	$file = get_sub_field('file');
-
-        endif;
-		echo '</div>';
-    endwhile;
-
-else :
-
-    // no layouts found
-
-endif;
-
-?>
-
-</section>
-
-<!-- Google Map -->
-<?php
-$googleMap = get_field('google_map');
-echo $googleMap['lat'];
-?>
-
-
-<section id="cd-google-map">
-	<div id="google-container"></div>
-	<div id="cd-zoom-in"></div>
-	<div id="cd-zoom-out"></div>
-	<!-- <address>86-90 Paul Street, London, EC2A 4NE</address>  -->
-</section>
-	
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA_NlAaj4mE1x66SF_JqpH44Rd-MYModw"></script>
-<script>
-	jQuery(document).ready(function($){
+jQuery(document).ready(function($){
 	//set your google maps parameters
 	var latitude = 51.5255069,
 		longitude = -0.0836207,
@@ -75,7 +6,7 @@ echo $googleMap['lat'];
 
 	//google map custom marker icon - .png fallback for IE11
 	var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-	var marker_url = ( is_internetExplorer11 ) ? 'img/cd-icon-location.png' : 'img/cd-icon-location.svg';
+	var marker_url = ( is_internetExplorer11 ) ? '/img/cd-icon-location.png' : '/img/cd-icon-location.svg';
 		
 	//define the basic color of your map, plus a value for saturation and brightness
 	var	main_color = '#2d313f',
@@ -300,6 +231,3 @@ echo $googleMap['lat'];
 });
 
   
-</script>
-
-<?php get_footer(); ?>

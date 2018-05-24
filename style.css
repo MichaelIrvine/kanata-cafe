@@ -161,62 +161,61 @@ body {
   background: #68191E;
   transition: all 0.5s ease; }
 
-/* ________MAIN MENU_____________ */
-/* --------- Reset Astra settings menu items ----- */
-.main-header-menu li:hover > a {
-  color: #FFF; }
+/* For Google Maps */
+#google-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #e7eaf0; }
+  @media only screen and (min-width: 768px) {
+    #google-container {
+      height: 300px; } }
+  @media only screen and (min-width: 1170px) {
+    #google-container {
+      height: 600px; } }
 
-.main-header-menu ul {
-  background: transparent; }
+#cd-google-map {
+  position: relative; }
+  #cd-google-map address {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 1em 1em;
+    background-color: rgba(211, 104, 104, 0.9);
+    color: #ffffff;
+    font-size: 13px;
+    font-size: 0.8125rem; }
+    @media only screen and (min-width: 768px) {
+      #cd-google-map address {
+        font-size: 15px;
+        font-size: 0.9375rem;
+        text-align: center; } }
 
-.submenu-with-border ul {
-  border-top: none; }
+#cd-zoom-in, #cd-zoom-out {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: rgba(211, 104, 104, 0.9);
+  background-repeat: no-repeat;
+  background-size: 32px 64px;
+  background-image: url("../img/cd-icon-controller.svg"); }
+  .no-touch #cd-zoom-in:hover, .no-touch #cd-zoom-out:hover {
+    background-color: #d36868; }
+  @media only screen and (min-width: 768px) {
+    #cd-zoom-in, #cd-zoom-out {
+      margin-left: 50px; } }
 
-.submenu-with-border ul a {
-  border: none;
-  border-left: 1px solid whitesmoke;
-  border-bottom: 1px solid whitesmoke; }
+#cd-zoom-in {
+  background-position: 50% 0;
+  margin-top: 10px;
+  margin-bottom: 1px; }
+  @media only screen and (min-width: 768px) {
+    #cd-zoom-in {
+      margin-top: 50px; } }
 
-/* --------- ^^^^Reset Astra settings menu items^^^^ ----- */
-.ast-main-header-bar-alignment {
-  position: absolute;
-  top: 20px;
-  right: 10px; }
-
-.main-header-bar {
-  line-height: 1.5; }
-
-.menu-item-12:after,
-.menu-item-13:after,
-.menu-item-14:after,
-.menu-item-15:after,
-.menu-item-27:after {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 1px;
-  background-color: #FFF;
-  margin: 5px 14px;
-  transition: all 0.5s ease-in; }
-
-.main-header-menu a {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 0.9em;
-  font-weight: 300;
-  letter-spacing: 3px;
-  color: #fff; }
-
-.ast-mobile-menu-buttons {
-  position: fixed;
-  top: 50px;
-  right: 50px; }
-
-.ast-button-wrap .menu-toggle.main-header-menu-toggle {
-  padding: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #68191E;
-  transition: all 0.5s ease; }
+#cd-zoom-out {
+  background-position: 50% -32px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,26 +15,59 @@
 
 get_header(); ?>
 
-<?php if ( astra_page_layout() == 'left-sidebar' ) : ?>
 
-	<?php get_sidebar(); ?>
 
-<?php endif ?>
+<div id="primary-menu-page">
 
-	<div id="primary" <?php astra_primary_class(); ?>>
+<section class="kanata-cafe-menu">
+<?php
 
-		<?php astra_primary_content_top(); ?>
+// check if the flexible content field has rows of data
+if( have_rows('kanata_cafe_menu') ):
 
-		<?php astra_content_page_loop(); ?>
+ 	// loop through the rows of data
+    while ( have_rows('kanata_cafe_menu') ) : the_row();
 
-		<?php astra_primary_content_bottom(); ?>
+		// check current row layout
+        if( get_row_layout() == 'drink_menu' ):
 
-	</div><!-- #primary -->
+			echo '<h1>' . $menuTitle . '</h1>';
+        	// check if the nested repeater field has rows of data
+        	if( have_rows('coffee_pour_overs') ):
 
-<?php if ( astra_page_layout() == 'right-sidebar' ) : ?>
+			 	echo '<ul>';
 
-	<?php get_sidebar(); ?>
+			 	// loop through the rows of data
+			    while ( have_rows('coffee_pour_overs') ) : the_row();
+					
+					$japaneseItem = get_sub_field('japanese_item');
+					$englishItem  = get_sub_field('english_item');
 
-<?php endif ?>
+					echo '<li>' . $japaneseItem . '</li>';
+					echo '<li>' . $englishItem . '</li>';
+
+				endwhile;
+
+				echo '</ul>';
+
+			endif;
+
+        endif;
+
+    endwhile;
+
+else :
+
+    // no layouts found
+
+endif;
+
+?>
+
+</section >
+
+
+
+</div><!-- #primary -->
 
 <?php get_footer(); ?>

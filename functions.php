@@ -56,3 +56,14 @@ add_action( 'wp_enqueue_scripts', 'kanata_gallery_scripts' );
 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'front-cover', 1200, 9999 ); // Unlimited Height
+
+
+
+/* ---------- Add Google Maps API ----------------------- */
+
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyAA_NlAaj4mE1x66SF_JqpH44Rd-MYModw');
+}
+
+add_action('acf/init', 'my_acf_init');
