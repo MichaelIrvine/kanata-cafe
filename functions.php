@@ -21,7 +21,8 @@ function child_enqueue_styles() {
 	wp_enqueue_style( 'kanata-cafe-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_KANATA_CAFE_VERSION, 'all' );
 	
 	// Add Fonts for Japanese Script - Google Fonts Early access
-	wp_enqueue_style('kanata-googlefonts', 'https://fonts.googleapis.com/css?family=Noto+Sans' );
+	wp_enqueue_style('kanata-googlefonts-noto', 'https://fonts.googleapis.com/css?family=Noto+Sans' );
+	wp_enqueue_style('kanata-googlefonts-unna', 'https://fonts.googleapis.com/css?family=Unna' );
 	wp_enqueue_style('kanata-googlefonts-japanese', 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' );
 
 }
@@ -67,3 +68,16 @@ function my_acf_init() {
 }
 
 add_action('acf/init', 'my_acf_init');
+
+
+/* ---------- Add Font Awesome ----------------------- */
+
+// function enqueue_load_fa() {
+//  	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.0.13/js/all.js' ); 
+// }
+
+// add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+
+//Enqueue Fontawesome
+wp_register_script( 'FontAwesome', 'https://use.fontawesome.com/releases/v5.0.13/js/all.js', null, null, true );
+wp_enqueue_script('FontAwesome');

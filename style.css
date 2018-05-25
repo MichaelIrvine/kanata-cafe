@@ -9,6 +9,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kanata-cafe
 Template: astra
 */
+.contact-container {
+  width: 100%;
+  display: flex;
+  margin: 10em 0; }
+  @media screen {
+    .contact-container {
+      flex-direction: column; } }
+
+.contact-info {
+  width: 25%;
+  height: auto;
+  background-color: antiquewhite; }
+
 body {
   background: #68191e; }
 
@@ -22,7 +35,7 @@ body {
 
 /* ______________SITE BRANDING____________ */
 .site-branding {
-  position: fixed;
+  position: absolute;
   top: 0px; }
   @media screen and (max-width: 500px) {
     .site-branding {
@@ -175,22 +188,8 @@ body {
       height: 600px; } }
 
 #cd-google-map {
-  position: relative; }
-  #cd-google-map address {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    padding: 1em 1em;
-    background-color: rgba(211, 104, 104, 0.9);
-    color: #ffffff;
-    font-size: 13px;
-    font-size: 0.8125rem; }
-    @media only screen and (min-width: 768px) {
-      #cd-google-map address {
-        font-size: 15px;
-        font-size: 0.9375rem;
-        text-align: center; } }
+  width: 100%;
+  margin-left: 2em; }
 
 #cd-zoom-in, #cd-zoom-out {
   height: 32px;
@@ -200,7 +199,7 @@ body {
   background-color: rgba(211, 104, 104, 0.9);
   background-repeat: no-repeat;
   background-size: 32px 64px;
-  background-image: url("../img/cd-icon-controller.svg"); }
+  background-image: url("./img/cd-icon-controller.svg"); }
   .no-touch #cd-zoom-in:hover, .no-touch #cd-zoom-out:hover {
     background-color: #d36868; }
   @media only screen and (min-width: 768px) {

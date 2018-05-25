@@ -37,23 +37,10 @@ Template: astra
 }
 
 #cd-google-map {
-	position: relative;
+	// position: relative;
+	width: 100%;
+	margin-left: 2em;
 
-	address {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-		left: 0;
-		padding: 1em 1em;
-		background-color: rgba($color-2, .9);
-		color: $color-3;
-		@include font-size(13px);
-
-		@include MQ(M) {
-			@include font-size(15px);
-			text-align: center;
-		}
-	}
 }
 
 #cd-zoom-in, #cd-zoom-out {
@@ -64,7 +51,7 @@ Template: astra
 	background-color: rgba($color-2, .9);
 	background-repeat: no-repeat;
 	background-size: 32px 64px;
-	background-image: url('../img/cd-icon-controller.svg');
+	background-image: url('./img/cd-icon-controller.svg');
 
 	.no-touch &:hover {
 		background-color: rgba($color-2, 1);

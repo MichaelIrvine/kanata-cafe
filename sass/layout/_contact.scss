@@ -1,0 +1,19 @@
+.contact-container {
+    width: 100%;
+    display: flex;
+    margin: 10em 0;
+
+    @media screen {
+        flex-direction: column;
+    }
+}
+
+.contact-info {
+    width: 25%;
+    height: auto;
+    background-color: antiquewhite;
+
+    // .contact-phone-number {}
+    // .contact-email{}
+    // .contact-address{}
+}

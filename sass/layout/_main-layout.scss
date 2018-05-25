@@ -1,4 +1,6 @@
 @import "google-map-layout";
+@import "contact";
+
 
 
 
@@ -22,7 +24,7 @@ body {
 /* ______________SITE BRANDING____________ */
 
 .site-branding {
-    position: fixed;
+    position: absolute;
     top: 0px;
 
     @media screen and (max-width: 500px) {

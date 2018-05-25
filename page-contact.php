@@ -15,8 +15,9 @@
 
 get_header(); ?>
 
+<div class="contact-container">
  <!-- Left column - Contact Info -->
-<section class="contact-col-1">
+<section class="contact-info">
 <?php
 
 // check if the flexible content field has rows of data
@@ -30,14 +31,11 @@ if( have_rows('contact') ):
 			echo '<h3 class="contact-phone-number">' . the_sub_field('contact_phone_number') . '</h3>';
 			echo '<h3 class="contact-email">' . the_sub_field('contact_email_address') . '</h3>';
 			echo '<h3 class="contact-address">' . the_sub_field('contact_address') . '</h3>';
-			
 
-        // elseif( get_row_layout() == 'download' ): 
-
-        // 	$file = get_sub_field('file');
-
-        endif;
+		endif;
+		
 		echo '</div>';
+		
     endwhile;
 
 else :
@@ -53,7 +51,8 @@ endif;
 <!-- Google Map -->
 <?php
 $googleMap = get_field('google_map');
-echo $googleMap['lat'];
+$imgIcon   = get_field('map_icon_png');
+$svgIcon   = get_field('map_icon_svg');
 ?>
 
 
@@ -64,18 +63,18 @@ echo $googleMap['lat'];
 	<!-- <address>86-90 Paul Street, London, EC2A 4NE</address>  -->
 </section>
 	
-
+</div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA_NlAaj4mE1x66SF_JqpH44Rd-MYModw"></script>
 <script>
 	jQuery(document).ready(function($){
 	//set your google maps parameters
-	var latitude = 51.5255069,
-		longitude = -0.0836207,
+	var latitude = <?php echo $googleMap['lat']; ?>,
+		longitude = <?php echo $googleMap['lng']; ?>,
 		map_zoom = 14;
 
 	//google map custom marker icon - .png fallback for IE11
 	var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-	var marker_url = ( is_internetExplorer11 ) ? 'img/cd-icon-location.png' : 'img/cd-icon-location.svg';
+	var marker_url = ( is_internetExplorer11 ) ? '<?php echo $imgIcon; ?>' : '<?php echo $svgIcon; ?>';
 		
 	//define the basic color of your map, plus a value for saturation and brightness
 	var	main_color = '#2d313f',
