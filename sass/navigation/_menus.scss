@@ -4,14 +4,14 @@
 
 // Hover Color
 .main-header-menu li:hover > a{
-    color: #FFF;
+    color: #ffffff;
 }
 
 // Background sub menu
 .main-header-menu ul {
     background: transparent;
-
 }
+
 
 .submenu-with-border ul {
     border-top: none;
@@ -25,13 +25,11 @@
 
 /* --------- ^^^^Reset Astra settings menu items^^^^ ----- */
 
-
-.ast-main-header-bar-alignment {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    
-}
+    .ast-main-header-bar-alignment {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
 
 
 .main-header-bar {
@@ -60,31 +58,24 @@
 
 
 
-
-// @keyframes menuBounce {
-//     0% {
-//         transform: translateY(0);
-//     }
-
-//     100% {
-//         transform: translateY(10px);
-//     }
-// }
-
-
-
-
-
 .main-header-menu a{
         font-family: 'Noto Sans', sans-serif;
         font-size: 0.9em;
         font-weight: 300;
         letter-spacing: 3px;
         color: #fff;
-
 }
 
 
+
+
+
+
+/*-----------------------------------------------------------------------
+-------------------------------------------------------------------------
+----------------------------- MOBILE MENU -------------------------------
+-------------------------------------------------------------------------
+-----------------------------------------------------------------------*/
 
 //--------------- Mobile Menu Button --------
 
@@ -92,6 +83,7 @@
     position: fixed;
     top: 50px;
     right: 50px;
+    z-index: 9999999;
 }
 
 .ast-button-wrap .menu-toggle.main-header-menu-toggle {
@@ -101,4 +93,79 @@
     border-radius: 50%;
     background: #68191E;
     transition: all 0.5s ease; 
+}
+
+
+
+//--------------- Drop Down Menu Button -----
+
+.ast-menu-toggle {
+    color: #ffffff;
+}
+
+.ast-menu-toggle:focus, .ast-menu-toggle:hover {
+    color: #ffffff;
+}
+
+.main-header-menu li:hover > .ast-menu-toggle {
+    color: #ffffff;
+}
+
+//---------- Set the Drop Down Arrow Button ----------
+.ast-header-break-point .main-header-bar 
+.main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle {
+    left: calc(100% - 75%);
+
+    @media screen and ( max-width: 400px ){
+        left: calc(100% - 80%);
+    }
+}
+
+
+
+// ---------- Set the Header Bar Alignment ------------
+@media screen and ( max-width: 920px ) {
+    .ast-main-header-bar-alignment {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+
+
+.ast-header-break-point .main-header-menu {
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 99;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+.ast-header-break-point .main-header-bar .main-header-bar-navigation .main-header-menu {
+    border-top: none;
+}
+
+.ast-header-break-point .main-navigation li {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ast-header-break-point .main-header-menu ul {
+    background-color: transparent;
+
+}
+
+.ast-header-break-point .main-navigation ul.children li a:before, .ast-header-break-point .main-navigation ul.sub-menu li a:before {
+    content: " ";
+    margin-right: 0px;
+}
+
+// ------------- Font Size for the Mobile Menu -----
+
+.ast-header-break-point .main-navigation ul li a {
+    font-size: 1.5em;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
 }

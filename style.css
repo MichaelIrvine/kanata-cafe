@@ -22,6 +22,22 @@ Template: astra
   height: auto;
   background-color: antiquewhite; }
 
+.icons {
+  display: flex; }
+
+.icon-links {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#masthead .site-logo-img .custom-logo-link img {
+  max-width: 140px; }
+
+.ast-header-break-point #masthead .site-logo-img .custom-logo-link img, .ast-header-break-point .site-branding img {
+  max-width: 140px; }
+
 body {
   background: #68191e; }
 
@@ -100,14 +116,13 @@ body {
   .big-text-container .fp_japanese_big {
     color: #FFF;
     font-family: "Noto Sans Japanese";
-    font-size: 18vw;
+    font-size: 17vw;
     font-weight: 1000;
     text-transform: uppercase;
     line-height: 0.9; }
 
 /* ________FRONT PAGE MAIN CONTENT_____________ */
 .site-content {
-  height: 100vh;
   padding: 0;
   margin: 0;
   background-color: #FFF;
@@ -116,10 +131,19 @@ body {
 .change-to-pink {
   background-color: #F7D7DA; }
 
+.intro-text-container {
+  display: flex; }
+
+.intro_english,
+.intro_japanese {
+  width: 40%;
+  margin: 0 auto;
+  font-family: 'Unna'; }
+
 /* ________MAIN MENU_____________ */
 /* --------- Reset Astra settings menu items ----- */
 .main-header-menu li:hover > a {
-  color: #FFF; }
+  color: #ffffff; }
 
 .main-header-menu ul {
   background: transparent; }
@@ -161,10 +185,16 @@ body {
   letter-spacing: 3px;
   color: #fff; }
 
+/*-----------------------------------------------------------------------
+-------------------------------------------------------------------------
+----------------------------- MOBILE MENU -------------------------------
+-------------------------------------------------------------------------
+-----------------------------------------------------------------------*/
 .ast-mobile-menu-buttons {
   position: fixed;
   top: 50px;
-  right: 50px; }
+  right: 50px;
+  z-index: 9999999; }
 
 .ast-button-wrap .menu-toggle.main-header-menu-toggle {
   padding: 0;
@@ -173,6 +203,55 @@ body {
   border-radius: 50%;
   background: #68191E;
   transition: all 0.5s ease; }
+
+.ast-menu-toggle {
+  color: #ffffff; }
+
+.ast-menu-toggle:focus, .ast-menu-toggle:hover {
+  color: #ffffff; }
+
+.main-header-menu li:hover > .ast-menu-toggle {
+  color: #ffffff; }
+
+.ast-header-break-point .main-header-bar
+.main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle {
+  left: calc(100% - 75%); }
+  @media screen and (max-width: 400px) {
+    .ast-header-break-point .main-header-bar
+    .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle {
+      left: calc(100% - 80%); } }
+
+@media screen and (max-width: 920px) {
+  .ast-main-header-bar-alignment {
+    position: absolute;
+    top: 0px;
+    right: 0px; } }
+.ast-header-break-point .main-header-menu {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  height: 100vh;
+  width: 100%;
+  position: fixed; }
+
+.ast-header-break-point .main-header-bar .main-header-bar-navigation .main-header-menu {
+  border-top: none; }
+
+.ast-header-break-point .main-navigation li {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase; }
+
+.ast-header-break-point .main-header-menu ul {
+  background-color: transparent; }
+
+.ast-header-break-point .main-navigation ul.children li a:before, .ast-header-break-point .main-navigation ul.sub-menu li a:before {
+  content: " ";
+  margin-right: 0px; }
+
+.ast-header-break-point .main-navigation ul li a {
+  font-size: 1.5em;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased; }
 
 /* For Google Maps */
 #google-container {
