@@ -24,12 +24,13 @@ get_header(); ?>
 				// loop through the rows of data
     			while ( have_rows('front_page_intro') ) : the_row();
 					// display a sub field value
-					echo '<div class="intro_english">';
-						echo the_sub_field('intro_english'); 
-						echo '</div>';
 						echo '<div class="intro_japanese">';
 						echo the_sub_field('intro_japanese'); 
 						echo '</div>';
+						echo '<div class="intro_english">';
+						echo the_sub_field('intro_english'); 
+						echo '</div>';
+						
 					echo '</section>';
 				endwhile;
 			else : // no rows found

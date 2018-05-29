@@ -1,12 +1,12 @@
 @import "google-map-layout";
 @import "contact";
-@import "front-page-content";
+@import "front-page-icons";
 @import "logo";
 
 
 
 body {
-    background: #68191e;
+    background: #FFF5F4;
 }
 
 /* ____________HEADER_____________________ */
@@ -20,6 +20,10 @@ body {
 // Reset from original Astra theme
 .ast-header-break-point .main-header-bar {
     padding: 0;
+}
+
+.ast-header-break-point .site-header {
+    border-bottom-style: none;
 }
 
 /* ______________SITE BRANDING____________ */
@@ -124,7 +128,7 @@ body {
     padding: 0;
     margin: 0;
 
-    background-color: #FFF;
+    background-color: #FFF5F4;
     transition: all 3s ease;
 }
 
@@ -132,14 +136,67 @@ body {
     background-color: #F7D7DA;
 }
 
+// ------ For the Welcome Text -------
 
 .intro-text-container {
     display: flex;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    margin-top: 4em;
+    border-top: 1px dotted lightgray;
+    border-bottom: 1px dotted lightgray;
+
+    @media screen and (max-width: 880px ) {
+        flex-direction: column;
+    }
 }
 
-.intro_english,
+
 .intro_japanese {
-    width: 40%;
-    margin: 0 auto;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.8em;
+    border-right: 1px dotted lightgray;
+
+    @media screen and (max-width: 880px ) {
+        width: 70%;
+        border: none;
+        padding: 0;
+        margin: 2em auto;
+    }
+
+    p {
+    font-family: 'Noto Sans Japanese';
+    font-size: 1.5em; 
+    }
+}
+
+
+.intro_english {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-left: 2em;
+    padding: 1.8em;
+
+    @media screen and (max-width: 880px ) {
+        width: 70%;
+        border-top: 1px dotted lightgray;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 2em;
+    }
+
+    p {
     font-family: 'Unna';
+    font-size: 1.70em;
+    letter-spacing: 1px 
+    }
 }
