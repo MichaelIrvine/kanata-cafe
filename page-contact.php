@@ -20,6 +20,8 @@ get_header(); ?>
 <section class="contact-info">
 <?php
 
+
+
 // check if the flexible content field has rows of data
 if( have_rows('contact') ):
 
@@ -27,11 +29,10 @@ if( have_rows('contact') ):
     while ( have_rows('contact') ) : the_row();
 		echo '<div class="contact-details">';
         if( get_row_layout() == 'contact_details' ):
-
-			echo '<h3 class="contact-phone-number">' . the_sub_field('contact_phone_number') . '</h3>';
-			echo '<h3 class="contact-email">' . the_sub_field('contact_email_address') . '</h3>';
-			echo '<h3 class="contact-address">' . the_sub_field('contact_address') . '</h3>';
-
+			echo '<h2 class="contact-title">Contact Us</h2>';
+			echo '<p class="contact-phone-number">'; the_sub_field('contact_phone_number'); echo '</p>';
+			echo '<p class="contact-email">'; the_sub_field('contact_email_address');  echo '</p>';
+			echo '<div class="contact-address">'; the_sub_field('contact_address'); echo '</div>';
 		endif;
 		
 		echo '</div>';

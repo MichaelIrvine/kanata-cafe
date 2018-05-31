@@ -4,7 +4,7 @@
 
 // Hover Color
 .main-header-menu li:hover > a{
-    color: #ffffff;
+    color: lightgray;
 }
 
 // Background sub menu
@@ -19,8 +19,8 @@
 
 .submenu-with-border ul a {
     border: none;
-    border-left: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
+    border-left: 1px solid #3a3a3a;
+    border-bottom: 1px solid #3a3a3a;
 }
 
 /* --------- ^^^^Reset Astra settings menu items^^^^ ----- */
@@ -38,23 +38,29 @@
 
 
 
-.menu-item-12,
-.menu-item-13,
-.menu-item-14,
-.menu-item-15,
-.menu-item-27 {
+// .menu-item-179,
+// .menu-item-182,
+// .menu-item-183,
+// .menu-item-184,
+// .menu-item-185 {
 
-    &:after {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 1px;
-        background-color: #FFF;  
-        margin: 5px 14px;
-        transition: all 0.5s ease-in;
-    }
+//     &:after {
+//         content: '';
+//         display: block;
+//         width: 30px;
+//         height: 1px;
+//         background-color: #3a3a3a;  
+//         margin: 5px 14px;
+//         transition: all 0.5s ease-in;
+//     }
 
+// }
+
+.menu-item-185 {
+    cursor: pointer;
 }
+
+
 
 
 
@@ -63,7 +69,11 @@
         font-size: 0.9em;
         font-weight: 300;
         letter-spacing: 3px;
-        color: #fff;
+        color: #3a3a3a;
+}
+
+.main-header-menu .current_page_item > a {
+    color: #3a3a3a;
 }
 
 

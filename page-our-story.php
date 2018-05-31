@@ -14,7 +14,44 @@
  */
 
 get_header(); ?>
+<?php
 
+// check if the flexible content field has rows of data
+if( have_rows('our_story') ):
 
+// loop through the rows of data
+while ( have_rows('our_story') ) : the_row();?>
+
+<section class="our-story-content-eng">
+    <?php 
+    if( get_row_layout() == 'english_content' ):     
+    ?>
+    <div class="left-col">
+        <?php
+        $image = get_sub_field('our_story_image');
+		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
+        ?>
+    </div>
+    <div class="right-col">
+        <?php
+            the_sub_field('our_story_title');
+            the_sub_field('our_story_paragraph');
+        ?>
+    </div>
+    <?php
+    endif;
+    ?>
+
+</section>
+
+<section class="our-story-content-japanese">
+    <div class="left-col"></div>
+    <div class="right-col"></div>
+</section>
+<?php 
+endwhile;
+
+endif;
+?>
 
 <?php get_footer(); ?>
