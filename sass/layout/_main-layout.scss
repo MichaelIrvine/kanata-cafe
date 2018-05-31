@@ -2,7 +2,7 @@
 @import "contact";
 @import "front-page-icons";
 @import "logo";
-
+@import "our-story";
 
 
 body {
@@ -116,11 +116,27 @@ body {
         font-weight: 1000;
         text-transform: uppercase;
         line-height: 0.9;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in both;
+    }
 
+    .fp_japanese_big {
+        animation-delay: 0.5s;
     }
 
 }
 
+// Animation for Big Text
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
 
 /* ________FRONT PAGE MAIN CONTENT_____________ */
 

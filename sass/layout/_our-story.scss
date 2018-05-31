@@ -1,0 +1,26 @@
+// About Section - Our Story
+
+.our-story-content-eng {
+
+    display: flex;
+    margin: 10em auto;
+
+    .left-col {
+        width: 40%;
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 500px;
+            width: auto;
+        }
+    }
+
+    .right-col {
+        width: 50%;
+    }
+}
+
+
+

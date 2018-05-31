@@ -29,12 +29,14 @@ while ( have_rows('our_story') ) : the_row();?>
     <div class="left-col">
         <?php
         $image = get_sub_field('our_story_image');
-		echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
+		echo '<img src="' . $image . '" alt="' . $image['alt'] . '" />';
         ?>
     </div>
     <div class="right-col">
         <?php
+            echo '<h2 class="our-story-title">';
             the_sub_field('our_story_title');
+            echo '</h2>';
             the_sub_field('our_story_paragraph');
         ?>
     </div>
