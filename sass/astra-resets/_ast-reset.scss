@@ -1,0 +1,37 @@
+/* --------- Reset Astra settings menu items ----- */
+
+// Hover Color
+.main-header-menu li:hover > a{
+    color: lightgray;
+}
+
+// Background sub menu
+.main-header-menu ul {
+    background: transparent;
+}
+
+
+// Active Current Menu 
+
+.main-header-menu li:hover > a, 
+.main-header-menu li:hover > .ast-menu-toggle, 
+.main-header-menu .ast-masthead-custom-menu-items a:hover, 
+.main-header-menu li.focus > a, .main-header-menu li.focus > .ast-menu-toggle, 
+.main-header-menu .current-menu-item > a, .main-header-menu .current-menu-ancestor > a, 
+.main-header-menu .current_page_item > a, 
+.main-header-menu .current-menu-item > .ast-menu-toggle, 
+.main-header-menu .current-menu-ancestor > .ast-menu-toggle, 
+.main-header-menu .current_page_item > .ast-menu-toggle {
+    color: #3a3a3a
+}
+
+// Sub Menu Border
+.submenu-with-border ul {
+    border-top: none;
+}
+
+.submenu-with-border ul a {
+    border: none;
+    border-left: 1px solid #3a3a3a;
+    border-bottom: 1px solid #3a3a3a;
+}

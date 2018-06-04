@@ -20,8 +20,6 @@ get_header(); ?>
 <section class="contact-info">
 <?php
 
-
-
 // check if the flexible content field has rows of data
 if( have_rows('contact') ):
 

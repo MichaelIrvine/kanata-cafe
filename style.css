@@ -9,6 +9,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kanata-cafe
 Template: astra
 */
+/* --------- Reset Astra settings menu items ----- */
+.main-header-menu li:hover > a {
+  color: lightgray; }
+
+.main-header-menu ul {
+  background: transparent; }
+
+.main-header-menu li:hover > a,
+.main-header-menu li:hover > .ast-menu-toggle,
+.main-header-menu .ast-masthead-custom-menu-items a:hover,
+.main-header-menu li.focus > a, .main-header-menu li.focus > .ast-menu-toggle,
+.main-header-menu .current-menu-item > a, .main-header-menu .current-menu-ancestor > a,
+.main-header-menu .current_page_item > a,
+.main-header-menu .current-menu-item > .ast-menu-toggle,
+.main-header-menu .current-menu-ancestor > .ast-menu-toggle,
+.main-header-menu .current_page_item > .ast-menu-toggle {
+  color: #3a3a3a; }
+
+.submenu-with-border ul {
+  border-top: none; }
+
+.submenu-with-border ul a {
+  border: none;
+  border-left: 1px solid #3a3a3a;
+  border-bottom: 1px solid #3a3a3a; }
+
 /* For Google Maps */
 #google-container {
   position: relative;
@@ -110,17 +136,54 @@ Template: astra
 
 .our-story-content-eng {
   display: flex;
-  margin: 10em auto; }
+  margin: 10em auto 3em; }
   .our-story-content-eng .left-col {
     width: 40%;
-    border: 1px solid;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 3em; }
     .our-story-content-eng .left-col img {
       height: 500px;
       width: auto; }
   .our-story-content-eng .right-col {
-    width: 50%; }
+    width: 50%;
+    border-top: 1px dotted lightgray;
+    margin-left: 5em; }
+    .our-story-content-eng .right-col .our-story-title {
+      font-family: "Unna", serif;
+      font-size: 2.5em;
+      margin-bottom: 1em;
+      padding: 0.4em;
+      padding-left: 0.1em;
+      border-bottom: 1px solid; }
+    .our-story-content-eng .right-col p {
+      font-family: "Unna", serif;
+      font-size: 1.3em;
+      padding-left: 0.4em; }
+
+.our-story-content-japanese {
+  display: flex;
+  padding-top: 5em;
+  margin-bottom: 10em;
+  border-top: 1px dotted lightgray; }
+  .our-story-content-japanese .left-col {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4em; }
+    .our-story-content-japanese .left-col p {
+      width: 70%;
+      font-family: 'Noto Sans Japanese';
+      font-size: 1.2em; }
+  .our-story-content-japanese .right-col {
+    width: 40%;
+    display: flex;
+    justify-content: center; }
+    .our-story-content-japanese .right-col img {
+      height: 500px;
+      width: auto; }
 
 body {
   background: #FFF5F4; }
@@ -324,22 +387,6 @@ body {
   background-position: 50% -32px; }
 
 /* ________MAIN MENU_____________ */
-/* --------- Reset Astra settings menu items ----- */
-.main-header-menu li:hover > a {
-  color: lightgray; }
-
-.main-header-menu ul {
-  background: transparent; }
-
-.submenu-with-border ul {
-  border-top: none; }
-
-.submenu-with-border ul a {
-  border: none;
-  border-left: 1px solid #3a3a3a;
-  border-bottom: 1px solid #3a3a3a; }
-
-/* --------- ^^^^Reset Astra settings menu items^^^^ ----- */
 .ast-main-header-bar-alignment {
   position: absolute;
   top: 20px;
@@ -353,13 +400,11 @@ body {
 
 .main-header-menu a {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 0.9em;
-  font-weight: 300;
+  font-size: 0.8em;
+  font-weight: 200;
   letter-spacing: 3px;
-  color: #3a3a3a; }
-
-.main-header-menu .current_page_item > a {
-  color: #3a3a3a; }
+  color: #3a3a3a;
+  text-transform: uppercase; }
 
 /*-----------------------------------------------------------------------
 -------------------------------------------------------------------------

@@ -1,36 +1,15 @@
 /* ________MAIN MENU_____________ */
 
-/* --------- Reset Astra settings menu items ----- */
-
-// Hover Color
-.main-header-menu li:hover > a{
-    color: lightgray;
-}
-
-// Background sub menu
-.main-header-menu ul {
-    background: transparent;
-}
 
 
-.submenu-with-border ul {
-    border-top: none;
-}
 
-.submenu-with-border ul a {
-    border: none;
-    border-left: 1px solid #3a3a3a;
-    border-bottom: 1px solid #3a3a3a;
-}
 
-/* --------- ^^^^Reset Astra settings menu items^^^^ ----- */
 
-    .ast-main-header-bar-alignment {
-        position: absolute;
-        top: 20px;
-        right: 10px;
+.ast-main-header-bar-alignment {
+    position: absolute;
+    top: 20px;
+    right: 10px;
     }
-
 
 .main-header-bar {
     line-height: 1.5;
@@ -66,15 +45,16 @@
 
 .main-header-menu a{
         font-family: 'Noto Sans', sans-serif;
-        font-size: 0.9em;
-        font-weight: 300;
+        font-size: 0.8em;
+        font-weight: 200;
         letter-spacing: 3px;
         color: #3a3a3a;
+        text-transform: uppercase;
 }
 
-.main-header-menu .current_page_item > a {
-    color: #3a3a3a;
-}
+// .main-header-menu .current_page_item > a {
+//     color: #3a3a3a;
+// }
 
 
 

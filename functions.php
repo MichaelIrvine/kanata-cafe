@@ -23,11 +23,30 @@ function child_enqueue_styles() {
 	// Add Fonts for Japanese Script - Google Fonts Early access
 	wp_enqueue_style('kanata-googlefonts-noto', 'https://fonts.googleapis.com/css?family=Noto+Sans' );
 	wp_enqueue_style('kanata-googlefonts-unna', 'https://fonts.googleapis.com/css?family=Unna' );
-	wp_enqueue_style('kanata-googlefonts-japanese', 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' );
+    wp_enqueue_style('kanata-googlefonts-japanese', 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' );
+    // wp_enqueue_style( 'FontAwesome', 'https://use.fontawesome.com/releases/v5.0.13/js/all.js', null, null, true );
 
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// -------------------------------
+// ------ Font Awesome -----------
+// -------------------------------
+
+
+function loadFontAwesome() {
+
+    wp_enqueue_style( 'font-awesome-free', '//use.fontawesome.com/releases/v5.0.13/css/all.css' );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'loadFontAwesome' );
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 function kanata_child_scripts() {
@@ -70,14 +89,13 @@ function my_acf_init() {
 add_action('acf/init', 'my_acf_init');
 
 
-/* ---------- Add Font Awesome ----------------------- */
+/* --------------------------- Register Menus ---------------------------- */
 
-// function enqueue_load_fa() {
-//  	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.0.13/js/all.js' ); 
-// }
 
-// add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+	register_nav_menus( array(
+		'footer-navigation' => esc_html__( 'Footer Navigation', 'kanata cafe' ),
+		'social' => esc_html__( 'Social Media Footer', 'kanata cafe' )
+	) );
 
-//Enqueue Fontawesome
-wp_register_script( 'FontAwesome', 'https://use.fontawesome.com/releases/v5.0.13/js/all.js', null, null, true );
-wp_enqueue_script('FontAwesome');
+
+

@@ -20,37 +20,51 @@ get_header(); ?>
 if( have_rows('our_story') ):
 
 // loop through the rows of data
-while ( have_rows('our_story') ) : the_row();?>
+while ( have_rows('our_story') ) : the_row();
 
+if( get_row_layout() == 'english_content' ):     
+?>
 <section class="our-story-content-eng">
-    <?php 
-    if( get_row_layout() == 'english_content' ):     
-    ?>
     <div class="left-col">
-        <?php
-        $image = get_sub_field('our_story_image');
-		echo '<img src="' . $image . '" alt="' . $image['alt'] . '" />';
-        ?>
+    <?php
+    $image = get_sub_field('our_story_image');
+    echo '<img src="' . $image . '" alt="' . $image . '" />';
+    ?>
     </div>
     <div class="right-col">
-        <?php
-            echo '<h2 class="our-story-title">';
-            the_sub_field('our_story_title');
-            echo '</h2>';
-            the_sub_field('our_story_paragraph');
-        ?>
-    </div>
     <?php
-    endif;
+        echo '<h2 class="our-story-title">';
+        the_sub_field('our_story_title');
+        echo '</h2>';
+        the_sub_field('our_story_paragraph');
     ?>
-
+    </div>
 </section>
+<?php
+endif;
+?>
 
-<section class="our-story-content-japanese">
-    <div class="left-col"></div>
-    <div class="right-col"></div>
-</section>
 <?php 
+if( get_row_layout() == 'japanese_content' ):     
+?>
+<section class="our-story-content-japanese">
+
+    <div class="left-col">
+    <?php
+        the_sub_field('our_story_japanese');
+    ?>
+    </div>
+    <div class="right-col">
+    <?php
+    $image = get_sub_field('our_story_image');
+    echo '<img src="' . $image . '" alt="' . $image . '" />';?>
+    </div>
+
+</section>
+
+<?php
+endif;
+
 endwhile;
 
 endif;
