@@ -29,15 +29,15 @@ get_header(); ?>
 		}
 		
 
-		if( get_field('contact_email', 'option') ){
-			echo '<p class="contact-email">'; the_field('contact_email', 'option'); echo '</p>';
+		if( get_field('contact_phone_number', 'option') ){
+			echo '<p class="contact-phone-number">'; the_field('contact_email', 'option'); echo '</p>';
 		}
 		
-		if( get_field('contact_address', 'option') ){
-			 echo '<div class="contact-address">'; 
-			 echo the_field('contact_address', 'option'); 
-			 echo '</div>';
+
+		if( get_field('contact_phone_number', 'option') ){
+		echo '<div class="contact-address">'; the_field('contact_address'); echo '</div>';
 		}
+		
 	
 		echo '</div>';
 

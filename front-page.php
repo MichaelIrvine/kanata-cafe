@@ -56,30 +56,29 @@ if( have_rows('front_page_links') ): ?>
 
 		?>
 
+		<?php if( $link ): ?>
+			<a href="<?php echo $link; ?>">
+		<?php endif; ?>
 		<li class="icon-links">
 
-			<?php if( $link ): ?>
-				<a href="<?php echo $link; ?>">
-			<?php endif; ?>
 
 				<?php echo file_get_contents( $icon );?>
 
 
-			<?php if( $link ): ?>
-				</a>
-			<?php endif; ?>
+
 
 		    <h3><?php echo $content; ?></h3>
 
 		</li>
+		<?php if( $link ): ?>
+			</a>
+		<?php endif; ?>
 
 	<?php endwhile; ?>
 
 	</ul>
 </section>
 <?php endif; ?>
-
-
 
 </div><!-- #primary -->
 

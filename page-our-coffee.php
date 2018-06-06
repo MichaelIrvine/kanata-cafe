@@ -13,28 +13,72 @@
  * @since 1.0.0
  */
 
+
 get_header(); ?>
+<?php
 
-<?php if ( astra_page_layout() == 'left-sidebar' ) : ?>
 
-	<?php get_sidebar(); ?>
+$image = get_field('our_coffee_image');
 
-<?php endif ?>
+if( !empty($image) ): ?>
 
-	<div id="primary" <?php astra_primary_class(); ?>>
+	<img src="<?php echo $image; ?>" alt="<?php echo $image; ?>" />
 
-		<?php astra_primary_content_top(); ?>
+<?php endif; 
 
-		<?php astra_content_page_loop(); ?>
 
-		<?php astra_primary_content_bottom(); ?>
+// check if the flexible content field has rows of data
+if( have_rows('our_story') ):
 
-	</div><!-- #primary -->
+// loop through the rows of data
+while ( have_rows('our_story') ) : the_row();
 
-<?php if ( astra_page_layout() == 'right-sidebar' ) : ?>
+if( get_row_layout() == 'english_content' ):     
+?>
+<section class="our-story-content-eng">
+    <div class="left-col">
+    <?php
+    $image = get_sub_field('our_story_image');
+    echo '<img src="' . $image . '" alt="' . $image . '" />';
+    ?>
+    </div>
+    <div class="right-col">
+    <?php
+        echo '<h2 class="our-story-title">';
+        the_sub_field('our_story_title');
+        echo '</h2>';
+        the_sub_field('our_story_paragraph');
+    ?>
+    </div>
+</section>
+<?php
+endif;
+?>
 
-	<?php get_sidebar(); ?>
+<?php 
+if( get_row_layout() == 'japanese_content' ):     
+?>
+<section class="our-story-content-japanese">
 
-<?php endif ?>
+    <div class="left-col">
+    <?php
+        the_sub_field('our_story_japanese');
+    ?>
+    </div>
+    <div class="right-col">
+    <?php
+    $image = get_sub_field('our_story_image');
+    echo '<img src="' . $image . '" alt="' . $image . '" />';?>
+    </div>
+
+</section>
+
+<?php
+endif;
+
+endwhile;
+
+endif;
+?>
 
 <?php get_footer(); ?>

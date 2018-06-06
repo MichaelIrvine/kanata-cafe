@@ -70,4 +70,17 @@ endwhile;
 endif;
 ?>
 
+<section class="partner-links">
+    <h2 class="partner-title">Partners</h2>
+    <?php
+        if( have_rows('partners', 'option') ):
+            while( have_rows('partners', 'option') ): the_row();
+            if( get_row_layout() == 'partner_details' ):
+                the_sub_field('dev_name', 'option');
+            endif;
+            endwhile;
+        endif;
+    ?>
+</section>
+
 <?php get_footer(); ?>

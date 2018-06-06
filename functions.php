@@ -31,6 +31,31 @@ function child_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
 
+
+function kanata_child_scripts() {
+	wp_enqueue_script('jquery');
+	wp_enqueue_script( 'waypoints', get_stylesheet_directory_uri() . '/js/waypoints/lib/jquery.waypoints.min.js', array( 'jquery' ), '1.0', false );
+	wp_enqueue_script( 'kanata_script', get_stylesheet_directory_uri() . '/js/kanata-script.js', array('jquery','waypoints'), '1.1', false );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'kanata_child_scripts' );
+
+
+
+function kanata_gallery_scripts() {
+		
+    	wp_enqueue_style('kanata-slicktheme', get_stylesheet_directory_uri() . '/slick/slick-theme.css');
+
+    	wp_enqueue_style('kanata-slick', get_stylesheet_directory_uri() . '/slick/slick.css');
+    		
+    	wp_enqueue_script('kanata-slickjs', get_stylesheet_directory_uri().'/slick/slick.min.js', array('jquery'), '1', false);
+
+    	wp_enqueue_script('kanata-slicksettings', get_stylesheet_directory_uri() . '/js/slicksettings.js', array('kanata-slickjs'), '1', false);
+}
+
+add_action( 'wp_enqueue_scripts', 'kanata_gallery_scripts' );
+
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // -------------------------------
@@ -49,27 +74,7 @@ add_action( 'wp_enqueue_scripts', 'loadFontAwesome' );
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-function kanata_child_scripts() {
-	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'waypoints', get_stylesheet_directory_uri() . '/js/waypoints/lib/jquery.waypoints.min.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'kanata_script', get_stylesheet_directory_uri() . '/js/kanata-script.js', array('jquery','waypoints'), '1.1', false );
-}
 
-add_action( 'wp_enqueue_scripts', 'kanata_child_scripts' );
-
-
-function kanata_gallery_scripts() {
-		
-    	wp_enqueue_style('kanata-slicktheme', get_stylesheet_directory_uri() . '/slick/slick-theme.css');
-
-    	wp_enqueue_style('kanata-slick', get_stylesheet_directory_uri() . '/slick/slick.css');
-    		
-    	wp_enqueue_script('kanata-slickjs', get_stylesheet_directory_uri().'/slick/slick.min.js', array('jquery'), '1', false);
-
-    	wp_enqueue_script('kanata-slicksettings', get_stylesheet_directory_uri() . '/js/slicksettings.js', array('kanata-slickjs'), '1', false);
-}
-
-add_action( 'wp_enqueue_scripts', 'kanata_gallery_scripts' );
 
 
 /* ---------- Add Custom Image Sizes ----------------------- */
@@ -97,5 +102,40 @@ add_action('acf/init', 'my_acf_init');
 		'social' => esc_html__( 'Social Media Footer', 'kanata cafe' )
 	) );
 
+/* --------------------------- ACF Options Page ---------------------------- */
 
+if( function_exists('acf_add_options_page') ) {
+    $args = array(
+          'page_title' => 'Contact Info',
+		  'menu_title' => 'Contact Info',
+		  'menu_slug'  => 'contact_info',
+          'icon_url' => 'dashicons-schedule'
+          //other args
+      );
+    acf_add_options_page($args);
 
+}
+
+if( function_exists('acf_add_options_page') ) {
+    $args = array(
+          'page_title' => 'Copyright Info',
+		  'menu_title' => 'Copyright Info',
+		  'menu_slug'  => 'copyright_info',
+          'icon_url' => 'dashicons-edit'
+          //other args
+      );
+    acf_add_options_page($args);
+
+}
+
+if( function_exists('acf_add_options_page') ) {
+    $args = array(
+          'page_title' => 'Partners',
+		  'menu_title' => 'Partners',
+		  'menu_slug'  => 'partners',
+          'icon_url' => 'dashicons-smiley'
+          //other args
+      );
+    acf_add_options_page($args);
+
+}

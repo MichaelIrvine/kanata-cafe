@@ -1,0 +1,132 @@
+$font-main: 'Noto Sans', sans-serif;
+$font-japanese: 'Noto Sans Japanese', sans-serif;
+$font-serif: 'Unna', serif;
+
+.footer-top-container {
+    display: flex;
+    padding: 2em;
+    background: #fafaf3;
+    border-top: 1px dotted lightgray;
+    border-bottom: 1px dotted lightgray;
+    margin: 2em;
+}
+
+
+.footer-contact {
+    flex: 1;
+    padding-right: 2em;
+    
+    p {
+        margin: 0;
+    }
+
+    .footer-contact-title {
+    font-family: $font-serif;
+    font-size: 1.3em;
+    }
+
+    .footer-contact-phone-number,
+    .footer-contact-email  {
+        font-family: "Noto Sans Japanese", sans-serif;
+        font-weight: 200;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+    }
+
+    .footer-contact-address {
+        margin-top: 1em;
+        p {
+        font-family: "Noto Sans Japanese", sans-serif;
+        font-weight: 200;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        }
+    }
+}
+
+
+.footer-menu {
+    // flex: 1;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-right: 1px solid lightgray;
+    width: 25%;
+
+    .footer-menu-title {
+    font-family: $font-serif;
+    font-size: 1.3em;
+    margin-bottom: 0;
+    }
+    ul {
+        list-style: none;
+        margin: 0
+    }
+
+    li a {
+        font-family: "Noto Sans Japanese", sans-serif;
+        font-weight: 200;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        color: #3a3a3a;
+
+    }
+}
+
+.footer-social-menu {
+    padding-left: 2em;
+    width: 15%;
+
+    .social-menu-title {
+    font-family: $font-serif;
+    font-size: 1.3em;
+    margin-bottom: 0;
+
+    }
+
+    ul {
+        list-style: none;
+        margin:0;
+        display: flex;
+        justify-content: space-between;
+        width: 35%;
+        margin-top: 1em;
+    }
+
+    li a {
+        color: #3a3a3a;
+    }
+    li:hover a {
+        text-decoration: underline;
+    }
+}
+
+
+
+.footer-bottom-container {
+    display: flex;
+    justify-content: center;
+
+    .copyright-info {
+        padding-right: 1em;
+        p {
+        font-family: "Noto Sans Japanese", sans-serif;
+        font-weight: 200;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        border-right: 1px solid lightgray;
+        padding-right: 1em;
+        }
+    }
+
+}
+
+    .dev-info {
+        
+        font-family: "Noto Sans Japanese", sans-serif;
+        font-weight: 200;
+        font-size: 0.8em;
+
+        a {
+        color: #3a3a3a;  
+        }
+    }
