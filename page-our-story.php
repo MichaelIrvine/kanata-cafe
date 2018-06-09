@@ -70,17 +70,33 @@ endwhile;
 endif;
 ?>
 
+
 <section class="partner-links">
     <h2 class="partner-title">Partners</h2>
-    <?php
-        if( have_rows('partners', 'option') ):
+
+    <?php 
+    if( have_rows('partners', 'option') ):?>
+        <ul class="partner-list">
+        <?php        
             while( have_rows('partners', 'option') ): the_row();
-            if( get_row_layout() == 'partner_details' ):
-                the_sub_field('dev_name', 'option');
+            if( get_row_layout() == 'partner_details' ): ?>
+            <li class="partner-item">
+            <a href="<?php the_sub_field('partner_link'); ?>" target="_blank">
+                <div class="partner-logo">
+                    <?php
+                    $image = get_sub_field('partner_logo');
+                    echo '<img src="' . $image['url'] . '" alt="' . $image . '" />';?>
+                </div>
+            </a>
+            </li>
+            <?php
             endif;
             endwhile;
-        endif;
-    ?>
+            endif;
+            ?>
+        </ul>
+            
+
 </section>
 
 <?php get_footer(); ?>

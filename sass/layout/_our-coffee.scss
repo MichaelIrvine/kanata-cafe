@@ -1,0 +1,93 @@
+$font-main: 'Noto Sans', sans-serif;
+$font-menu: 'Noto Sans', sans-serif;
+$font-japanese: 'Noto Sans Japanese', sans-serif;
+$font-serif: 'Unna', serif;
+
+// About Section - Our coffee - Top Section
+
+.our-coffee-top {
+    display: flex;
+    justify-content: center;
+    margin: 10em auto 3em;
+
+}
+
+
+
+// About Section - Our coffee - English Section
+
+.our-coffee-content-eng {
+
+    display: flex;
+    margin: 10em auto 3em;
+
+    .left-col {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        padding-top: 3em;
+
+        img {
+            height: 500px;
+            width: auto;
+        }
+    }
+
+    .right-col {
+        width: 50%;
+        border-top: 1px dotted lightgray;
+        margin-left: 5em;
+
+        .our-coffee-title {
+            font-family: $font-serif;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            padding: 0.4em;
+            padding-left: 0.1em;
+            border-bottom: 1px solid;
+        }
+
+        p {
+            font-family: $font-serif;
+            font-size: 1.3em;
+            padding-left: 0.4em;
+        }
+    }
+}
+
+
+// About Section - Our coffee - Japanese Section
+
+.our-coffee-content-japanese {
+    display: flex;
+    padding-top: 5em;
+    margin-bottom: 10em;
+    border-top: 1px dotted lightgray;
+
+    .left-col {
+        width: 60%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.4em;
+
+        p {
+        width: 70%;
+        font-family: 'Noto Sans Japanese';
+        font-size: 1.2em;
+        }
+    }
+
+    .right-col {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 500px;
+            width: auto;
+        }
+    }
+}

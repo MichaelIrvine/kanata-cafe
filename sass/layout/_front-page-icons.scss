@@ -1,9 +1,15 @@
+$font-main: 'Noto Sans', sans-serif;
+$font-menu: 'Noto Sans', sans-serif;
+$font-japanese: 'Noto Sans Japanese', sans-serif;
+$font-serif: 'Unna', serif;
+
+
 .icon-container {
-    margin: 4em auto;
+    margin: 5em auto 4em;
     display: flex;
     justify-content: center;
     // border: 1px solid;
-    max-width: 70%;
+    max-width: 85%;
     height: auto;
 }
 
@@ -11,9 +17,22 @@
 .icons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0;
+
+    a {
+        margin: 2em;
+        border-bottom: 1px solid lightgray;
+    }
+
+    @media screen and ( max-width: 647px ) {
+        justify-content: center;
+    }
+
+
 }
+
+
 
 .icon-links {
     display: flex;
@@ -22,4 +41,19 @@
     justify-content: center;
     align-items: center;
     margin: 40px;
+
+    h3 {
+        font-family: $font-serif;
+        font-size: 1.6em;
+        margin-top: 1em;
+    }
+
+    svg {
+        width: 120px;
+        height: 120px;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 }

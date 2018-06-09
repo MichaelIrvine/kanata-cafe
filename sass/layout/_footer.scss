@@ -9,6 +9,10 @@ $font-serif: 'Unna', serif;
     border-top: 1px dotted lightgray;
     border-bottom: 1px dotted lightgray;
     margin: 2em;
+
+    @media screen and ( max-width: 625px ){
+        display: none;
+    }
 }
 
 
@@ -42,6 +46,8 @@ $font-serif: 'Unna', serif;
         letter-spacing: 1px;
         }
     }
+
+    
 }
 
 
@@ -70,11 +76,13 @@ $font-serif: 'Unna', serif;
         color: #3a3a3a;
 
     }
+
+
 }
 
 .footer-social-menu {
     padding-left: 2em;
-    width: 15%;
+    // width: 15%;
 
     .social-menu-title {
     font-family: $font-serif;
@@ -90,6 +98,10 @@ $font-serif: 'Unna', serif;
         justify-content: space-between;
         width: 35%;
         margin-top: 1em;
+
+        @media screen and (max-width: 1125px) {
+            flex-direction: column;
+        }
     }
 
     li a {
@@ -98,6 +110,7 @@ $font-serif: 'Unna', serif;
     li:hover a {
         text-decoration: underline;
     }
+
 }
 
 

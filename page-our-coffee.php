@@ -15,39 +15,29 @@
 
 
 get_header(); ?>
+
 <?php
-
-
-$image = get_field('our_coffee_image');
-
-if( !empty($image) ): ?>
-
-	<img src="<?php echo $image; ?>" alt="<?php echo $image; ?>" />
-
-<?php endif; 
-
-
 // check if the flexible content field has rows of data
-if( have_rows('our_story') ):
+if( have_rows('our_coffee') ):
 
 // loop through the rows of data
-while ( have_rows('our_story') ) : the_row();
+while ( have_rows('our_coffee') ) : the_row();
 
 if( get_row_layout() == 'english_content' ):     
 ?>
-<section class="our-story-content-eng">
+<section class="our-coffee-content-eng">
     <div class="left-col">
     <?php
-    $image = get_sub_field('our_story_image');
+    $image = get_sub_field('our_coffee_image');
     echo '<img src="' . $image . '" alt="' . $image . '" />';
     ?>
     </div>
     <div class="right-col">
     <?php
-        echo '<h2 class="our-story-title">';
-        the_sub_field('our_story_title');
+        echo '<h2 class="our-coffee-title">';
+        the_sub_field('our_coffee_title');
         echo '</h2>';
-        the_sub_field('our_story_paragraph');
+        the_sub_field('our_coffee_paragraph');
     ?>
     </div>
 </section>
@@ -58,16 +48,16 @@ endif;
 <?php 
 if( get_row_layout() == 'japanese_content' ):     
 ?>
-<section class="our-story-content-japanese">
+<section class="our-coffee-content-japanese">
 
     <div class="left-col">
     <?php
-        the_sub_field('our_story_japanese');
+        the_sub_field('our_coffee_paragraph');
     ?>
     </div>
     <div class="right-col">
     <?php
-    $image = get_sub_field('our_story_image');
+    $image = get_sub_field('our_coffee_image');
     echo '<img src="' . $image . '" alt="' . $image . '" />';?>
     </div>
 

@@ -65,8 +65,6 @@ if( have_rows('front_page_links') ): ?>
 				<?php echo file_get_contents( $icon );?>
 
 
-
-
 		    <h3><?php echo $content; ?></h3>
 
 		</li>
