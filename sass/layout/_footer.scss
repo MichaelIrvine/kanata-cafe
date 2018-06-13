@@ -68,13 +68,17 @@ $font-serif: 'Unna', serif;
         margin: 0
     }
 
-    li a {
+    a {
         font-family: "Noto Sans Japanese", sans-serif;
         font-weight: 200;
         font-size: 0.8em;
         letter-spacing: 1px;
         color: #3a3a3a;
+        
+    }
 
+     a:hover {
+        text-decoration: underline;
     }
 
 
@@ -82,7 +86,7 @@ $font-serif: 'Unna', serif;
 
 .footer-social-menu {
     padding-left: 2em;
-    // width: 15%;
+
 
     .social-menu-title {
     font-family: $font-serif;
@@ -106,9 +110,7 @@ $font-serif: 'Unna', serif;
 
     li a {
         color: #3a3a3a;
-    }
-    li:hover a {
-        text-decoration: underline;
+        padding: 1em;
     }
 
 }
@@ -140,6 +142,10 @@ $font-serif: 'Unna', serif;
         font-size: 0.8em;
 
         a {
-        color: #3a3a3a;  
+        color: #3a3a3a;
+
+        &:hover {
+            text-decoration: underline;
+        }
         }
     }

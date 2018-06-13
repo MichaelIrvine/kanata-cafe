@@ -170,20 +170,22 @@ Template: astra
     .our-story-content-eng {
       flex-direction: column; } }
   .our-story-content-eng .left-col {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    padding-top: 3em; }
+    width: 35%;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 4em; }
     @media screen and (max-width: 880px) {
       .our-story-content-eng .left-col {
-        width: 100%; } }
-    .our-story-content-eng .left-col img {
-      height: 500px;
-      width: auto; }
+        display: none; } }
   .our-story-content-eng .right-col {
     width: 50%;
     border-top: 1px dotted lightgray;
     margin-left: 5em; }
+    @media screen and (max-width: 880px) {
+      .our-story-content-eng .right-col {
+        width: 80%;
+        margin: 0 auto; } }
     .our-story-content-eng .right-col .our-story-title {
       font-family: "Unna", serif;
       font-size: 2.5em;
@@ -201,6 +203,9 @@ Template: astra
   padding-top: 5em;
   margin-bottom: 10em;
   border-top: 1px dotted lightgray; }
+  @media screen and (max-width: 880px) {
+    .our-story-content-japanese {
+      flex-direction: column; } }
   .our-story-content-japanese .left-col {
     width: 60%;
     display: flex;
@@ -208,17 +213,35 @@ Template: astra
     justify-content: center;
     align-items: center;
     padding: 1.4em; }
+    @media screen and (max-width: 880px) {
+      .our-story-content-japanese .left-col {
+        width: 90%;
+        margin: 0 auto; } }
     .our-story-content-japanese .left-col p {
       width: 70%;
       font-family: 'Noto Sans Japanese';
       font-size: 1.2em; }
+      @media screen and (max-width: 880px) {
+        .our-story-content-japanese .left-col p {
+          width: 60%; } }
+      @media screen and (max-width: 550px) {
+        .our-story-content-japanese .left-col p {
+          width: 90%; } }
   .our-story-content-japanese .right-col {
-    width: 40%;
-    display: flex;
-    justify-content: center; }
-    .our-story-content-japanese .right-col img {
-      height: 500px;
-      width: auto; }
+    width: 35%;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 880px) {
+      .our-story-content-japanese .right-col {
+        width: 70%;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 2em; } }
+    @media screen and (max-width: 550px) {
+      .our-story-content-japanese .right-col {
+        width: 90%;
+        height: 300px; } }
 
 .partner-links {
   display: flex;
@@ -227,11 +250,22 @@ Template: astra
   border-top: 1px dotted lightgray; }
   .partner-links .partner-title {
     font-family: "Unna", serif;
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    margin-top: 1em; }
+    @media screen and (max-width: 550px) {
+      .partner-links .partner-title {
+        margin: 0 auto;
+        margin-top: 1em; } }
   .partner-links .partner-list {
     list-style: none;
     display: flex;
     margin: 0; }
+    @media screen and (max-width: 550px) {
+      .partner-links .partner-list {
+        flex-direction: column;
+        margin: 0 auto; } }
+  .partner-links .partner-item {
+    margin: 3em; }
 
 .our-coffee-top {
   display: flex;
@@ -242,17 +276,23 @@ Template: astra
   display: flex;
   margin: 10em auto 3em; }
   .our-coffee-content-eng .left-col {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    padding-top: 3em; }
-    .our-coffee-content-eng .left-col img {
-      height: 500px;
-      width: auto; }
+    width: 35%;
+    max-width: 40%;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 4em; }
+    @media screen and (max-width: 880px) {
+      .our-coffee-content-eng .left-col {
+        display: none; } }
   .our-coffee-content-eng .right-col {
     width: 50%;
     border-top: 1px dotted lightgray;
     margin-left: 5em; }
+    @media screen and (max-width: 880px) {
+      .our-coffee-content-eng .right-col {
+        width: 80%;
+        margin: 0 auto; } }
     .our-coffee-content-eng .right-col .our-coffee-title {
       font-family: "Unna", serif;
       font-size: 2.5em;
@@ -270,6 +310,9 @@ Template: astra
   padding-top: 5em;
   margin-bottom: 10em;
   border-top: 1px dotted lightgray; }
+  @media screen and (max-width: 880px) {
+    .our-coffee-content-japanese {
+      flex-direction: column; } }
   .our-coffee-content-japanese .left-col {
     width: 60%;
     display: flex;
@@ -277,17 +320,35 @@ Template: astra
     justify-content: center;
     align-items: center;
     padding: 1.4em; }
+    @media screen and (max-width: 880px) {
+      .our-coffee-content-japanese .left-col {
+        width: 90%;
+        margin: 0 auto; } }
     .our-coffee-content-japanese .left-col p {
       width: 70%;
       font-family: 'Noto Sans Japanese';
       font-size: 1.2em; }
+      @media screen and (max-width: 880px) {
+        .our-coffee-content-japanese .left-col p {
+          width: 60%; } }
+      @media screen and (max-width: 550px) {
+        .our-coffee-content-japanese .left-col p {
+          width: 90%; } }
   .our-coffee-content-japanese .right-col {
-    width: 40%;
-    display: flex;
-    justify-content: center; }
-    .our-coffee-content-japanese .right-col img {
-      height: 500px;
-      width: auto; }
+    width: 35%;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 880px) {
+      .our-coffee-content-japanese .right-col {
+        width: 70%;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 2em; } }
+    @media screen and (max-width: 550px) {
+      .our-coffee-content-japanese .right-col {
+        width: 90%;
+        height: 300px; } }
 
 .footer-top-container {
   display: flex;
@@ -334,12 +395,14 @@ Template: astra
   .footer-menu ul {
     list-style: none;
     margin: 0; }
-  .footer-menu li a {
+  .footer-menu a {
     font-family: "Noto Sans Japanese", sans-serif;
     font-weight: 200;
     font-size: 0.8em;
     letter-spacing: 1px;
     color: #3a3a3a; }
+  .footer-menu a:hover {
+    text-decoration: underline; }
 
 .footer-social-menu {
   padding-left: 2em; }
@@ -358,9 +421,8 @@ Template: astra
       .footer-social-menu ul {
         flex-direction: column; } }
   .footer-social-menu li a {
-    color: #3a3a3a; }
-  .footer-social-menu li:hover a {
-    text-decoration: underline; }
+    color: #3a3a3a;
+    padding: 1em; }
 
 .footer-bottom-container {
   display: flex;
@@ -381,6 +443,8 @@ Template: astra
   font-size: 0.8em; }
   .dev-info a {
     color: #3a3a3a; }
+    .dev-info a:hover {
+      text-decoration: underline; }
 
 .site-main {
   margin: 10em auto; }
@@ -652,7 +716,7 @@ body {
     top: 0px;
     right: 0px; } }
 .ast-header-break-point .main-header-menu {
-  background-color: rgba(250, 250, 243, 0.9);
+  background-color: #FAFAF3;
   z-index: 99;
   height: 100vh;
   width: 100%;

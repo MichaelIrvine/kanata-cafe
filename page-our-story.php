@@ -25,11 +25,10 @@ while ( have_rows('our_story') ) : the_row();
 if( get_row_layout() == 'english_content' ):     
 ?>
 <section class="our-story-content-eng">
-    <div class="left-col">
     <?php
     $image = get_sub_field('our_story_image');
-    echo '<img src="' . $image . '" alt="' . $image . '" />';
     ?>
+    <div class="left-col" style="background-image: url(<?php echo $image; ?> )">
     </div>
     <div class="right-col">
     <?php
@@ -54,10 +53,11 @@ if( get_row_layout() == 'japanese_content' ):
         the_sub_field('our_story_japanese');
     ?>
     </div>
-    <div class="right-col">
+    
     <?php
     $image = get_sub_field('our_story_image');
-    echo '<img src="' . $image . '" alt="' . $image . '" />';?>
+    ?>
+    <div class="right-col" style="background-image: url(<?php echo $image; ?> )">
     </div>
 
 </section>

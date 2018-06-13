@@ -26,11 +26,10 @@ while ( have_rows('our_coffee') ) : the_row();
 if( get_row_layout() == 'english_content' ):     
 ?>
 <section class="our-coffee-content-eng">
-    <div class="left-col">
     <?php
     $image = get_sub_field('our_coffee_image');
-    echo '<img src="' . $image . '" alt="' . $image . '" />';
     ?>
+    <div class="left-col" style="background-image: url(<?php echo $image; ?> )">
     </div>
     <div class="right-col">
     <?php
@@ -55,10 +54,10 @@ if( get_row_layout() == 'japanese_content' ):
         the_sub_field('our_coffee_paragraph');
     ?>
     </div>
-    <div class="right-col">
     <?php
     $image = get_sub_field('our_coffee_image');
-    echo '<img src="' . $image . '" alt="' . $image . '" />';?>
+    ?>
+    <div class="right-col" style="background-image: url(<?php echo $image; ?> )">
     </div>
 
 </section>

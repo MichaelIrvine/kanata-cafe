@@ -16,25 +16,27 @@ $font-serif: 'Unna', serif;
     }
 
     .left-col {
-        width: 40%;
-        display: flex;
-        justify-content: center;
-        padding-top: 3em;
+        width: 35%;
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 4em;
 
         @media screen and ( max-width: 880px ){
-        width: 100%;
+        display: none;
         }
 
-        img {
-            height: 500px;
-            width: auto;
-        }
     }
 
     .right-col {
         width: 50%;
         border-top: 1px dotted lightgray;
         margin-left: 5em;
+
+        @media screen and ( max-width: 880px ){
+        width: 80%;
+        margin: 0 auto;
+        }
 
         .our-story-title {
             font-family: $font-serif;
@@ -62,8 +64,18 @@ $font-serif: 'Unna', serif;
     margin-bottom: 10em;
     border-top: 1px dotted lightgray;
 
+    @media screen and ( max-width: 880px ){
+        flex-direction: column;
+    }
+
     .left-col {
         width: 60%;
+
+        @media screen and ( max-width: 880px ){
+        width: 90%;
+        margin: 0 auto;
+        }
+        
         
         display: flex;
         flex-direction: column;
@@ -75,18 +87,34 @@ $font-serif: 'Unna', serif;
         width: 70%;
         font-family: 'Noto Sans Japanese';
         font-size: 1.2em;
+
+        @media screen and ( max-width: 880px ){
+        width: 60%;
+        }
+        @media screen and ( max-width: 550px ){
+        width: 90%;
+        }
         }
     }
 
     .right-col {
-        width: 40%;
-        display: flex;
-        justify-content: center;
+        width: 35%;
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
 
-        img {
+        @media screen and ( max-width: 880px ){
+            width: 70%;
             height: 500px;
-            width: auto;
+            margin: 0 auto;
+            margin-top: 2em;
         }
+
+        @media screen and ( max-width: 550px ){
+        width: 90%;
+        height: 300px;
+        }
+
     }
 }
 
@@ -100,14 +128,31 @@ $font-serif: 'Unna', serif;
     margin: 0 auto;
     border-top: 1px dotted lightgray;
 
+
+
     .partner-title {
         font-family: $font-serif;
         font-size: 2.5em;
+        margin-top: 1em;
+
+        @media screen and ( max-width: 550px ){
+            margin: 0 auto;
+            margin-top: 1em;
+        }
     }
 
     .partner-list {
         list-style: none;
         display: flex;
         margin: 0;
+
+        @media screen and ( max-width: 550px ){
+            flex-direction: column; 
+            margin: 0 auto;
+        }
+    }
+
+    .partner-item {
+        margin: 3em;
     }
 }
