@@ -51,6 +51,10 @@ $L:     1170px;
 	// position: relative;
 	width: 70%;
 	margin-left: 2em;
+	@media screen and ( max-width: 920px ){
+        width: 80%;
+        margin: 0 auto;
+    }
 
 }
 

@@ -51,6 +51,10 @@ Template: astra
 #cd-google-map {
   width: 70%;
   margin-left: 2em; }
+  @media screen and (max-width: 920px) {
+    #cd-google-map {
+      width: 80%;
+      margin: 0 auto; } }
 
 #cd-zoom-in, #cd-zoom-out {
   height: 32px;
@@ -82,10 +86,17 @@ Template: astra
   width: 100%;
   display: flex;
   margin: 10em 0; }
+  @media screen and (max-width: 920px) {
+    .contact-container {
+      flex-direction: column; } }
 
 .contact-info {
   width: 45%;
   height: auto; }
+  @media screen and (max-width: 920px) {
+    .contact-info {
+      width: 80%;
+      margin: 0 auto; } }
 
 .contact-details {
   display: flex;
@@ -155,11 +166,17 @@ Template: astra
 .our-story-content-eng {
   display: flex;
   margin: 10em auto 3em; }
+  @media screen and (max-width: 880px) {
+    .our-story-content-eng {
+      flex-direction: column; } }
   .our-story-content-eng .left-col {
     width: 40%;
     display: flex;
     justify-content: center;
     padding-top: 3em; }
+    @media screen and (max-width: 880px) {
+      .our-story-content-eng .left-col {
+        width: 100%; } }
     .our-story-content-eng .left-col img {
       height: 500px;
       width: auto; }
@@ -202,6 +219,19 @@ Template: astra
     .our-story-content-japanese .right-col img {
       height: 500px;
       width: auto; }
+
+.partner-links {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-top: 1px dotted lightgray; }
+  .partner-links .partner-title {
+    font-family: "Unna", serif;
+    font-size: 2.5em; }
+  .partner-links .partner-list {
+    list-style: none;
+    display: flex;
+    margin: 0; }
 
 .our-coffee-top {
   display: flex;
@@ -351,6 +381,9 @@ Template: astra
   font-size: 0.8em; }
   .dev-info a {
     color: #3a3a3a; }
+
+.site-main {
+  margin: 10em auto; }
 
 body {
   background: #FAFAF3; }
@@ -526,6 +559,10 @@ body {
 #cd-google-map {
   width: 70%;
   margin-left: 2em; }
+  @media screen and (max-width: 920px) {
+    #cd-google-map {
+      width: 80%;
+      margin: 0 auto; } }
 
 #cd-zoom-in, #cd-zoom-out {
   height: 32px;
@@ -573,6 +610,9 @@ body {
   color: #3a3a3a;
   text-transform: uppercase; }
 
+.main-header-menu:hover a {
+  color: #B6B6B1; }
+
 /*-----------------------------------------------------------------------
 -------------------------------------------------------------------------
 ----------------------------- MOBILE MENU -------------------------------
@@ -593,13 +633,10 @@ body {
   transition: all 0.5s ease; }
 
 .ast-menu-toggle {
-  color: #ffffff; }
+  color: #3a3a3a; }
 
 .ast-menu-toggle:focus, .ast-menu-toggle:hover {
-  color: #ffffff; }
-
-.main-header-menu li:hover > .ast-menu-toggle {
-  color: #ffffff; }
+  color: #68191E; }
 
 .ast-header-break-point .main-header-bar
 .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle {
@@ -615,7 +652,7 @@ body {
     top: 0px;
     right: 0px; } }
 .ast-header-break-point .main-header-menu {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(250, 250, 243, 0.9);
   z-index: 99;
   height: 100vh;
   width: 100%;

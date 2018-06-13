@@ -1,10 +1,5 @@
 /* ________MAIN MENU_____________ */
 
-
-
-
-
-
 .ast-main-header-bar-alignment {
     position: absolute;
     top: 20px;
@@ -17,30 +12,9 @@
 
 
 
-// .menu-item-179,
-// .menu-item-182,
-// .menu-item-183,
-// .menu-item-184,
-// .menu-item-185 {
-
-//     &:after {
-//         content: '';
-//         display: block;
-//         width: 30px;
-//         height: 1px;
-//         background-color: #3a3a3a;  
-//         margin: 5px 14px;
-//         transition: all 0.5s ease-in;
-//     }
-
-// }
-
 .menu-item-185 {
     cursor: pointer;
 }
-
-
-
 
 
 .main-header-menu a{
@@ -52,12 +26,9 @@
         text-transform: uppercase;
 }
 
-// .main-header-menu .current_page_item > a {
-//     color: #3a3a3a;
-// }
-
-
-
+.main-header-menu:hover a {
+    color: #B6B6B1
+}
 
 
 
@@ -90,15 +61,13 @@
 //--------------- Drop Down Menu Button -----
 
 .ast-menu-toggle {
-    color: #ffffff;
+    color: #3a3a3a;
 }
+
+
 
 .ast-menu-toggle:focus, .ast-menu-toggle:hover {
-    color: #ffffff;
-}
-
-.main-header-menu li:hover > .ast-menu-toggle {
-    color: #ffffff;
+    color: #68191E;
 }
 
 //---------- Set the Drop Down Arrow Button ----------
@@ -125,7 +94,7 @@
 
 
 .ast-header-break-point .main-header-menu {
-    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-color: rgba($color: #FAFAF3, $alpha: 0.9);
     z-index: 99;
     height: 100vh;
     width: 100%;
