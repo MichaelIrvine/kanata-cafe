@@ -1,10 +1,12 @@
 /* Slider */
 
 .slider {
-   margin-top: 6.5em;
+   max-width: 900px;
+   margin: 7em auto;
    padding-top: 3em;
-   border-top: 1px solid #3a3a3a;
+   border-top: 1px dotted lightgray;
 }
+
 
 @media screen and ( max-width: 760px ){
     .slider {
@@ -13,6 +15,9 @@
 }
 .slick-slider
 {
+    /* custom settings */
+    margin: 0;
+    /* end custom settings */
     position: relative;
 
     display: block;
@@ -105,6 +110,13 @@
     margin: 0 auto;
     max-height: 500px;
 }
+@media screen and ( max-width: 420px ){
+    .slick-slide img {
+        max-width: 400px;
+        max-height: 250px;
+    }
+}
+
 .slick-slide.slick-loading img
 {
     display: none;

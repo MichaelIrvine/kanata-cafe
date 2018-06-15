@@ -10,6 +10,13 @@ jQuery(document).ready(function($) {
     adaptiveHeight: true,
     responsive: [
       {
+        breakpoint: 999,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
@@ -18,7 +25,12 @@ jQuery(document).ready(function($) {
       },
       {
         breakpoint: 600,
-        settings: "unslick"
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          mobileFirst: true
+        }
       }
     ]
   });

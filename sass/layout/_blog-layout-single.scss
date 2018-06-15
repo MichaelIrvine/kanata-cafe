@@ -1,0 +1,75 @@
+$font-main: 'Noto Sans', sans-serif;
+$font-menu: 'Noto Sans', sans-serif;
+$font-japanese: 'Noto Sans Japanese', sans-serif;
+$font-serif: 'Unna', serif;
+
+.ast-article-single {
+    
+
+    .single-layout-1 {
+
+        .entry-header {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2em;
+            border-bottom: 1px dotted lightgray;
+
+            .post-thumb {
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .ast-single-post-order {
+                margin: 4em auto 0;
+
+               .entry-title {
+                font-family: $font-serif;
+               } 
+
+               .entry-meta * {
+                font-family: "Noto Sans Japanese", sans-serif;
+                font-weight: 200;
+                font-style: italic;
+                font-size: 1em;
+                color: #666666;
+               }
+            }
+        }
+
+        .entry-content {
+            p {
+            font-family: $font-japanese;
+            font-size: 1em;
+            font-weight: 400;
+            letter-spacing: 1px;
+            width: 80%;
+            margin: 0 auto;
+            }
+        }
+    }
+}
+
+.post-navigation {
+    .nav-links {
+        .nav-previous {
+            a {
+            color: #3a3a3a;
+            }
+        }
+
+        .nav-previous:hover a {
+            opacity: 0.5;
+        }
+
+        .nav-next {
+            a {
+            color: #3a3a3a;
+            }
+        }
+
+        .nav-next:hover a {
+            opacity: 0.5;
+        }
+    }
+}

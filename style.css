@@ -449,6 +449,86 @@ Template: astra
 .site-main {
   margin: 10em auto; }
 
+.post-content {
+  border-top: 1px dotted lightgray;
+  padding: 2em; }
+  .post-content .ast-blog-featured-section {
+    max-width: 500px;
+    overflow: hidden;
+    margin: 2em; }
+    @media screen and (max-width: 400px) {
+      .post-content .ast-blog-featured-section {
+        margin: 0 auto 3em; } }
+  .post-content .entry-header {
+    display: flex;
+    flex-direction: column; }
+    @media screen and (max-width: 780px) {
+      .post-content .entry-header {
+        width: 85%;
+        margin: 0 auto; } }
+    .post-content .entry-header .entry-title {
+      font-family: "Unna", serif;
+      font-size: 2.5em; }
+      .post-content .entry-header .entry-title:hover {
+        opacity: 0.5; }
+    .post-content .entry-header .entry-meta .posted-on span.published {
+      font-family: "Noto Sans Japanese", sans-serif;
+      font-weight: 200;
+      font-style: italic;
+      font-size: 1em;
+      color: #666666; }
+  .post-content .entry-content {
+    display: flex;
+    flex-direction: column; }
+    @media screen and (max-width: 780px) {
+      .post-content .entry-content {
+        width: 85%;
+        margin: 3em auto; } }
+    .post-content .entry-content p {
+      font-family: "Noto Sans Japanese", sans-serif;
+      font-size: 0.9em;
+      font-weight: 400;
+      letter-spacing: 1px; }
+    .post-content .entry-content .read-more a {
+      color: #68191E; }
+      .post-content .entry-content .read-more a:hover {
+        opacity: 0.5; }
+
+.ast-article-single .single-layout-1 .entry-header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+  border-bottom: 1px dotted lightgray; }
+  .ast-article-single .single-layout-1 .entry-header .post-thumb {
+    display: flex;
+    justify-content: center; }
+  .ast-article-single .single-layout-1 .entry-header .ast-single-post-order {
+    margin: 4em auto 0; }
+    .ast-article-single .single-layout-1 .entry-header .ast-single-post-order .entry-title {
+      font-family: "Unna", serif; }
+    .ast-article-single .single-layout-1 .entry-header .ast-single-post-order .entry-meta * {
+      font-family: "Noto Sans Japanese", sans-serif;
+      font-weight: 200;
+      font-style: italic;
+      font-size: 1em;
+      color: #666666; }
+.ast-article-single .single-layout-1 .entry-content p {
+  font-family: "Noto Sans Japanese", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 80%;
+  margin: 0 auto; }
+
+.post-navigation .nav-links .nav-previous a {
+  color: #3a3a3a; }
+.post-navigation .nav-links .nav-previous:hover a {
+  opacity: 0.5; }
+.post-navigation .nav-links .nav-next a {
+  color: #3a3a3a; }
+.post-navigation .nav-links .nav-next:hover a {
+  opacity: 0.5; }
+
 body {
   background: #FAFAF3; }
 
@@ -535,7 +615,8 @@ body {
     text-transform: uppercase;
     line-height: 0.9;
     opacity: 0;
-    animation: fadeIn 1.5s ease-in both; }
+    animation: fadeIn 1.5s ease-in both;
+    animation-delay: 1s; }
   .big-text-container .fp_japanese_big {
     animation-delay: 0.5s; }
 
@@ -552,9 +633,6 @@ body {
   margin: 0;
   background-color: #fafaf3;
   transition: all 3s ease; }
-
-.change-to-pink {
-  background-color: #F7D7DA; }
 
 .intro-text-container {
   display: flex;
