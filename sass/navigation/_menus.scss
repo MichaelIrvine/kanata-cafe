@@ -28,7 +28,12 @@
 
 .main-header-menu:hover a {
     color: #B6B6B1
-    // opacity: 0.4;
+}
+
+@media screen and ( max-width: 768px ){
+    .main-header-menu:hover a {
+        color: #3a3a3a;
+    }
 }
 
 
@@ -74,11 +79,9 @@
 //---------- Set the Drop Down Arrow Button ----------
 .ast-header-break-point .main-header-bar 
 .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle {
-    left: calc(100% - 75%);
+    top: 0;
+    left: 30px;
 
-    @media screen and ( max-width: 400px ){
-        left: calc(100% - 80%);
-    }
 }
 
 
@@ -97,7 +100,7 @@
 .ast-header-break-point .main-header-menu {
     background-color: #FAFAF3;
     z-index: 99;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: fixed;
 }
@@ -125,7 +128,7 @@
 // ------------- Font Size for the Mobile Menu -----
 
 .ast-header-break-point .main-navigation ul li a {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
 }

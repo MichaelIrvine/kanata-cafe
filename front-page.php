@@ -50,7 +50,7 @@ if( have_rows('front_page_links') ): ?>
 
 		// vars
 		$icon 	 = get_sub_field('icon_svg', 'option');
-		$content = get_sub_field('link_title');
+		$linkTitle = get_sub_field('link_title');
 		$link 	 = get_sub_field('page_link');
 		
 
@@ -65,7 +65,7 @@ if( have_rows('front_page_links') ): ?>
 				<?php echo file_get_contents( $icon );?>
 
 
-		    <h3><?php echo $content; ?></h3>
+		    <h3><?php echo $linkTitle; ?></h3>
 
 		</li>
 		<?php if( $link ): ?>

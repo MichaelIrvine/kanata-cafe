@@ -4,9 +4,9 @@ $font-japanese: 'Noto Sans Japanese', sans-serif;
 $font-serif: 'Unna', serif;
 
 
-// About Section - Our Story - English Section
+// About Section - Our Story - Japanese Section
 
-.our-story-content-eng {
+.our-story-content-japanese {
 
     display: flex;
     margin: 10em auto 3em;
@@ -48,17 +48,17 @@ $font-serif: 'Unna', serif;
         }
 
         p {
-            font-family: $font-serif;
-            font-size: 1.3em;
+            font-family: $font-japanese;
+            font-size: 1.2em;
             padding-left: 0.4em;
         }
     }
 }
 
 
-// About Section - Our Story - Japanese Section
+// About Section - Our Story - English Section
 
-.our-story-content-japanese {
+.our-story-content-english {
     display: flex;
     padding-top: 5em;
     margin-bottom: 10em;
@@ -85,8 +85,8 @@ $font-serif: 'Unna', serif;
 
         p {
         width: 70%;
-        font-family: 'Noto Sans Japanese';
-        font-size: 1.2em;
+        font-family: $font-serif, 'Serif';
+        font-size: 1.3em;
 
         @media screen and ( max-width: 880px ){
         width: 60%;

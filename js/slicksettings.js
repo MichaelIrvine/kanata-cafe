@@ -25,12 +25,14 @@ jQuery(document).ready(function($) {
       },
       {
         breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          mobileFirst: true
-        }
+        settings:
+        'unslick'
+        // {
+        //   slidesToShow: 1,
+        //   slidesToScroll: 1,
+        //   arrows: false,
+        //   //mobileFirst: true
+        // }
       }
     ]
   });

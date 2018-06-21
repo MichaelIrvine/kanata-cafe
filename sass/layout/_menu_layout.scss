@@ -1,0 +1,122 @@
+$font-main: 'Noto Sans', sans-serif;
+$font-menu: 'Noto Sans', sans-serif;
+$font-japanese: 'Noto Sans Japanese', sans-serif;
+$font-serif: 'Unna', serif;
+
+
+
+
+.menu-container {
+    margin: 10em auto;
+    display: flex;
+
+    @media screen and ( max-width: 1800px){
+        flex-direction: column;
+        width: 60%;
+    }
+
+    @media screen and ( max-width: 780px){
+        flex-direction: column;
+        width: 80%;
+    }
+    @media screen and ( max-width: 420px){
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+.kanata-cafe-menu_drinks {
+    flex: 1;
+    margin: 1em;
+    background: white;
+    padding: 4em;
+    border: 7px double #3a3a3a;
+
+    .menu-title {
+    text-align: center;
+    font-family: $font-serif;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    border-bottom: 1px dotted lightgray;
+    -webkit-font-smoothing: antialiased;
+    }
+
+    .category_title {
+    text-align: center;
+    font-family: $font-serif;
+    font-size: 1.5em;
+    margin: 1em 0 0;
+    -webkit-font-smoothing: antialiased;
+    }
+
+    .category-list {
+    margin: 0;
+    padding: 1.2em;
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px dotted lightgray;
+
+        li {
+            font-family: $font-japanese;
+            font-size: 1em;
+            color: #5c5c5c;
+        }
+
+        .price {
+            font-family: $font-japanese;
+            font-weight: 200;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+    }
+
+
+}
+
+.kanata-cafe-menu_food {
+    flex: 1;
+    margin: 1em;
+    background: white;
+    padding: 4em;
+    border: 7px double #3a3a3a;
+
+    .menu-title {
+    text-align: center;
+    font-family: $font-serif;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    border-bottom: 1px dotted lightgray;
+    -webkit-font-smoothing: antialiased;
+    }
+
+    .category_title {
+    text-align: center;
+    font-family: $font-serif;
+    font-size: 1.5em;
+    margin: 1em 0 0;
+    -webkit-font-smoothing: antialiased;
+    }
+
+    .category-list {
+    margin: 0;
+    padding: 1.2em;
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px dotted lightgray;
+
+        li {
+            font-family: $font-japanese;
+            font-size: 1em;
+            color: #5c5c5c;
+        }
+
+        .price {
+            font-family: $font-japanese;
+            font-weight: 200;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+    }
+
+}

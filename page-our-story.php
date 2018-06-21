@@ -22,44 +22,48 @@ if( have_rows('our_story') ):
 // loop through the rows of data
 while ( have_rows('our_story') ) : the_row();
 
-if( get_row_layout() == 'english_content' ):     
+if( get_row_layout() == 'japanese_content' ):     
 ?>
-<section class="our-story-content-eng">
+
+<section class="our-story-content-japanese">
+
     <?php
     $image = get_sub_field('our_story_image');
     ?>
     <div class="left-col" style="background-image: url(<?php echo $image; ?> )">
     </div>
+    
     <div class="right-col">
     <?php
         echo '<h2 class="our-story-title">';
         the_sub_field('our_story_title');
         echo '</h2>';
-        the_sub_field('our_story_paragraph');
+        the_sub_field('our_story_japanese');
     ?>
     </div>
+    
+
 </section>
 <?php
 endif;
 ?>
 
 <?php 
-if( get_row_layout() == 'japanese_content' ):     
+if( get_row_layout() == 'english_content' ):     
 ?>
-<section class="our-story-content-japanese">
-
+<section class="our-story-content-english">
     <div class="left-col">
     <?php
-        the_sub_field('our_story_japanese');
+        echo '</h2>';
+        the_sub_field('our_story_paragraph');
     ?>
     </div>
-    
     <?php
     $image = get_sub_field('our_story_image');
     ?>
     <div class="right-col" style="background-image: url(<?php echo $image; ?> )">
-    </div>
 
+    </div>
 </section>
 
 <?php

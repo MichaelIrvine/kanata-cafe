@@ -23,9 +23,9 @@ if( have_rows('our_coffee') ):
 // loop through the rows of data
 while ( have_rows('our_coffee') ) : the_row();
 
-if( get_row_layout() == 'english_content' ):     
+if( get_row_layout() == 'japanese_content' ):     
 ?>
-<section class="our-coffee-content-eng">
+<section class="our-coffee-content-japanese">
     <?php
     $image = get_sub_field('our_coffee_image');
     ?>
@@ -45,9 +45,9 @@ endif;
 ?>
 
 <?php 
-if( get_row_layout() == 'japanese_content' ):     
+if( get_row_layout() == 'english_content' ):     
 ?>
-<section class="our-coffee-content-japanese">
+<section class="our-coffee-content-english">
 
     <div class="left-col">
     <?php
@@ -71,3 +71,6 @@ endif;
 ?>
 
 <?php get_footer(); ?>
+
+
+

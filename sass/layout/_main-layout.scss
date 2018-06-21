@@ -7,6 +7,7 @@
 @import "footer";
 @import "blog-layout";
 @import "blog-layout-single";
+@import "menu_layout";
 
 
 body {
@@ -106,6 +107,11 @@ body {
     position: absolute;
     right: 100px;
     top: 215px;
+    cursor: default;
+    
+    @media screen and ( max-width: 768px ){
+        top: 40%;
+    }
 
     @media screen and ( max-width: 670px ){
         display: none;
@@ -116,17 +122,13 @@ body {
     .fp_japanese_big, {
         color: #FFF;
         font-family: "Noto Sans Japanese";
-        font-size: 17vw;
+        font-size: 18vw;
         font-weight: 1000;
         text-transform: uppercase;
         line-height: 0.9;
         opacity: 0;
-        animation: fadeIn 1.5s ease-in both;
+        animation: fadeIn 1.5s cubic-bezier(0, 0, 0.57, 1.28) both;
         animation-delay: 1s;
-    }
-
-    .fp_japanese_big {
-        animation-delay: 0.5s;
     }
 
 }
@@ -180,6 +182,9 @@ body {
     margin-bottom: 2em;
     padding: 1.8em;
     border-right: 1px dotted lightgray;
+    transition: all 1s cubic-bezier(0, 0, 0.57, 1.28);
+    opacity: 0;
+    transform: translateY(10%);
 
     @media screen and (max-width: 880px ) {
         width: 70%;
@@ -203,6 +208,10 @@ body {
     margin-top: 2em;
     margin-left: 2em;
     padding: 1.8em;
+    transition: all 1s cubic-bezier(0, 0, 0.57, 1.28);
+    transition-delay: 0.5s;
+    opacity: 0;
+    transform: translateY(10%);
 
     @media screen and (max-width: 880px ) {
         width: 70%;
@@ -217,4 +226,9 @@ body {
     font-size: 1.70em;
     letter-spacing: 1px 
     }
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
 }

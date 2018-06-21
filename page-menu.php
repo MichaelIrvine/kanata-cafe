@@ -15,43 +15,58 @@
 
 get_header(); ?>
 
+<div class="menu-container">
+	
+<section class="kanata-cafe-menu_drinks">
 
-
-<div id="primary-menu-page">
-
-<section class="kanata-cafe-menu">
+	
 <?php
+$icon = get_field('menu_icon_1', 'option');
+echo file_get_contents( $icon );
+
 
 // check if the flexible content field has rows of data
-if( have_rows('kanata_cafe_menu') ):
+if( have_rows('drink_menu') ):
+
+	$field = get_field_object('drink_menu');
+
+	echo '<h1 class="menu-title">';
+	echo $field['label'];
+	echo '</h1>';
 
  	// loop through the rows of data
-    while ( have_rows('kanata_cafe_menu') ) : the_row();
-
+    while ( have_rows('drink_menu') ) : the_row();
+		
 		// check current row layout
-        if( get_row_layout() == 'drink_menu' ):
+		if( get_row_layout() == 'drink_category' ):?>
+			<?php
+			echo '<h3 class="category_title">';
+			echo the_sub_field('category_title');
+			echo '</h3>';
 
-			echo '<h1>' . $menuTitle . '</h1>';
         	// check if the nested repeater field has rows of data
-        	if( have_rows('coffee_pour_overs') ):
+        	if( have_rows('category_list') ): ?>
 
-			 	echo '<ul>';
-
-			 	// loop through the rows of data
-			    while ( have_rows('coffee_pour_overs') ) : the_row();
-					
-					$japaneseItem = get_sub_field('japanese_item');
-					$englishItem  = get_sub_field('english_item');
-
-					echo '<li>' . $japaneseItem . '</li>';
-					echo '<li>' . $englishItem . '</li>';
-
-				endwhile;
-
-				echo '</ul>';
-
-			endif;
-
+				
+				
+				<?php
+			    while ( have_rows('category_list') ) : the_row();?>
+				<ul class="category-list">
+				<li class="japanese-item"> <?php the_sub_field('japanese_item'); ?> </li>
+				<li class="english-item"> <?php the_sub_field('english_item'); ?> </li>
+				<li class="price">
+					<span><?php the_sub_field('short_price'); ?></span>
+					<span><?php the_sub_field('seperator'); ?></span>
+					<span><?php the_sub_field('tall_price'); ?></span>
+				</li>
+				</ul>
+				<?php	
+				endwhile;?>
+				
+			<?php
+			endif;?>
+			 
+		<?php	
         endif;
 
     endwhile;
@@ -64,10 +79,73 @@ endif;
 
 ?>
 
+
 </section >
 
 
 
-</div><!-- #primary -->
+<section class="kanata-cafe-menu_food">
+
+<?php
+
+// check if the flexible content field has rows of data
+if( have_rows('food_menu') ):
+
+	$field = get_field_object('food_menu');
+
+	echo '<h1 class="menu-title">';
+	echo $field['label'];
+	echo '</h1>';
+
+ 	// loop through the rows of data
+    while ( have_rows('food_menu') ) : the_row();
+		
+		// check current row layout
+		if( get_row_layout() == 'food_category' ):?>
+			<?php
+			echo '<h3 class="category_title">';
+			echo the_sub_field('category_title');
+			echo '</h3>';
+
+        	// check if the nested repeater field has rows of data
+        	if( have_rows('category_list') ): ?>
+
+				
+				
+				<?php
+			    while ( have_rows('category_list') ) : the_row();?>
+				<ul class="category-list">
+				<li class="japanese-item"> <?php the_sub_field('japanese_item'); ?> </li>
+				<li class="english-item"> <?php the_sub_field('english_item'); ?> </li>
+				<li class="price">
+					<span><?php the_sub_field('short_price'); ?></span>
+					<span><?php the_sub_field('seperator'); ?></span>
+					<span><?php the_sub_field('tall_price'); ?></span>
+				</li>
+				</ul>
+				<?php	
+				endwhile;?>
+				
+			<?php
+			endif;?>
+			 
+		<?php	
+        endif;
+
+    endwhile;
+
+else :
+
+    // no layouts found
+
+endif;
+
+?>
+
+
+</section >
+</div>
+
+
 
 <?php get_footer(); ?>

@@ -12,8 +12,7 @@ jQuery(document).ready(function($) {
   });
 
   // Change Font Color on Home Page
-
-
+  // And Mobile Menu
   const $body = $("body");
   const $bodyHasClass = $body.hasClass("home");
 
@@ -39,23 +38,17 @@ jQuery(document).ready(function($) {
   /* Attach the function to the resize event listener */
   window.addEventListener('resize', mediaSize, false); 
 
+// Intro Text fade in
+// Using Waypoints 
+
+  const $trigger = $('.intro-text-container');
+  const $textToReveal = $('.intro_japanese, .intro_english');
 
 
-  // Testing new code
+  $trigger.waypoint(function () {
+      $textToReveal.addClass('reveal')
+  }, {offset: '40%'});
 
-  // const changer = {
-  //   menuColorChange: function() {
-  //     // Change Font Color on Home Page
-  //     const body = document.getElementsByClassName("body");
-  //     const bodyHasClass = body.hasClass("home");
 
-  //     if ($bodyHasClass === true) {
-  //       $(".main-header-menu a").css("color", "#fff");
-  //       $(".submenu-with-border ul a")
-  //         .css("border-left", "1px solid #fff")
-  //         .css("border-bottom", "1px solid #fff");
-  //     }
-  //   }
-  // };
 
 }); // End of .ready 
