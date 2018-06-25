@@ -56,21 +56,22 @@ if( have_rows('front_page_links') ): ?>
 
 		?>
 
+		<li class="icon-links">
 		<?php if( $link ): ?>
 			<a href="<?php echo $link; ?>">
 		<?php endif; ?>
-		<li class="icon-links">
+
 
 
 				<?php echo file_get_contents( $icon );?>
 
 
 		    <h3><?php echo $linkTitle; ?></h3>
-
-		</li>
 		<?php if( $link ): ?>
 			</a>
 		<?php endif; ?>
+		</li>
+
 
 	<?php endwhile; ?>
 

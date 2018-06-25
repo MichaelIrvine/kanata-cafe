@@ -19,12 +19,14 @@ get_header(); ?>
 	
 <section class="kanata-cafe-menu_drinks">
 
-	
+	<div class="menu-icon">
+		<?php
+		$icon = get_field('menu_icon');
+		echo '<img src="' . $icon . '" alt="' . $icon . '" />';
+		?>
+	</div>
+
 <?php
-$icon = get_field('menu_icon_1', 'option');
-echo file_get_contents( $icon );
-
-
 // check if the flexible content field has rows of data
 if( have_rows('drink_menu') ):
 
@@ -53,7 +55,9 @@ if( have_rows('drink_menu') ):
 			    while ( have_rows('category_list') ) : the_row();?>
 				<ul class="category-list">
 				<li class="japanese-item"> <?php the_sub_field('japanese_item'); ?> </li>
+				<li class="japanese-item-desc"> <?php the_sub_field('japanese_item_description'); ?> </li>
 				<li class="english-item"> <?php the_sub_field('english_item'); ?> </li>
+				<li class="english-item-desc"> <?php the_sub_field('english_item_description'); ?> </li>
 				<li class="price">
 					<span><?php the_sub_field('short_price'); ?></span>
 					<span><?php the_sub_field('seperator'); ?></span>
@@ -116,7 +120,9 @@ if( have_rows('food_menu') ):
 			    while ( have_rows('category_list') ) : the_row();?>
 				<ul class="category-list">
 				<li class="japanese-item"> <?php the_sub_field('japanese_item'); ?> </li>
+				<li class="japanese-item-desc"> <?php the_sub_field('japanese_item_description'); ?> </li>
 				<li class="english-item"> <?php the_sub_field('english_item'); ?> </li>
+				<li class="english-item-desc"> <?php the_sub_field('english_item_description'); ?> </li>
 				<li class="price">
 					<span><?php the_sub_field('short_price'); ?></span>
 					<span><?php the_sub_field('seperator'); ?></span>

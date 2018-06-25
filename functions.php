@@ -13,24 +13,6 @@
  */
 define( 'CHILD_THEME_KANATA_CAFE_VERSION', '1.0.0' );
 
-/**
- * Enqueue styles
- */
-function child_enqueue_styles() {
-
-	wp_enqueue_style( 'kanata-cafe-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_KANATA_CAFE_VERSION, 'all' );
-	
-	// Add Fonts for Japanese Script - Google Fonts Early access
-	wp_enqueue_style('kanata-googlefonts-noto', 'https://fonts.googleapis.com/css?family=Noto+Sans' );
-	wp_enqueue_style('kanata-googlefonts-unna', 'https://fonts.googleapis.com/css?family=Unna' );
-    wp_enqueue_style('kanata-googlefonts-japanese', 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' );
-    // wp_enqueue_style( 'FontAwesome', 'https://use.fontawesome.com/releases/v5.0.13/js/all.js', null, null, true );
-
-}
-
-add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
-
-
 
 function kanata_child_scripts() {
 	wp_enqueue_script('jquery');
@@ -40,6 +22,27 @@ function kanata_child_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'kanata_child_scripts' );
+/**
+ * Enqueue styles
+ */
+function child_enqueue_styles() {
+
+	wp_enqueue_style( 'kanata-cafe-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_KANATA_CAFE_VERSION, 'all' );
+	
+    // Add Fonts for Japanese Script - Google Fonts Early access
+        wp_enqueue_style('kanata-googlefonts-japanese', 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' );
+	wp_enqueue_style('kanata-googlefonts-noto', 'https://fonts.googleapis.com/css?family=Noto+Sans' );
+	wp_enqueue_style('kanata-googlefonts-unna', 'https://fonts.googleapis.com/css?family=Unna' );
+
+    
+
+}
+
+add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+
+
+
+
 
 
 
@@ -139,3 +142,14 @@ if( function_exists('acf_add_options_page') ) {
     acf_add_options_page($args);
 
 }
+
+// -------------------------------
+// ------ SVG support ------------
+// -------------------------------
+
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

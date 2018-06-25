@@ -83,3 +83,20 @@ $font-serif: 'Unna', serif;
         }
     }
 }
+
+
+.nav-links {
+
+        .page-numbers {
+        color: #3a3a3a;
+
+        &:hover {
+        color: #68191E;
+        }
+    }
+
+    .page-numbers .current {
+        text-decoration: underline;
+        text-underline-position: below;
+    }
+}

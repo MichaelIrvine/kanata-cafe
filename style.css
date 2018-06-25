@@ -146,7 +146,10 @@ Template: astra
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  margin: 40px; }
+  margin: 40px;
+  transition: all 1s cubic-bezier(0, 0, 0.57, 1.28);
+  opacity: 0;
+  transform: translateY(10%); }
   .icon-links h3 {
     font-family: "Unna", serif;
     font-size: 1.6em;
@@ -156,6 +159,25 @@ Template: astra
     height: 120px; }
   .icon-links:hover {
     transform: translateY(-5px); }
+
+.icon-links:nth-child(2) {
+  transition-delay: 0.1s; }
+
+.icon-links:nth-child(3) {
+  transition-delay: 0.2s; }
+
+.icon-links:nth-child(4) {
+  transition-delay: 0.3s; }
+
+.icon-links:nth-child(5) {
+  transition-delay: 0.4s; }
+
+.icon-links:nth-child(6) {
+  transition-delay: 0.5s; }
+
+.icon-reveal {
+  opacity: 1;
+  transform: translateY(0); }
 
 #masthead .site-logo-img .custom-logo-link img {
   max-width: 140px; }
@@ -489,6 +511,14 @@ Template: astra
       .post-content .entry-content .read-more a:hover {
         opacity: 0.5; }
 
+.nav-links .page-numbers {
+  color: #3a3a3a; }
+  .nav-links .page-numbers:hover {
+    color: #68191E; }
+.nav-links .page-numbers .current {
+  text-decoration: underline;
+  text-underline-position: below; }
+
 .ast-article-single .single-layout-1 .entry-header {
   display: flex;
   flex-direction: column;
@@ -530,7 +560,7 @@ Template: astra
   @media screen and (max-width: 1800px) {
     .menu-container {
       flex-direction: column;
-      width: 60%; } }
+      width: 75%; } }
   @media screen and (max-width: 780px) {
     .menu-container {
       flex-direction: column;
@@ -545,7 +575,14 @@ Template: astra
   margin: 1em;
   background: white;
   padding: 4em;
+  padding-top: 2em;
   border: 7px double #3a3a3a; }
+  .kanata-cafe-menu_drinks .menu-icon {
+    display: flex;
+    justify-content: center;
+    margin: 0; }
+    .kanata-cafe-menu_drinks .menu-icon img {
+      max-width: 100px; }
   .kanata-cafe-menu_drinks .menu-title {
     text-align: center;
     font-family: "Unna", serif;
@@ -609,6 +646,12 @@ Template: astra
       font-weight: 200;
       font-style: italic;
       letter-spacing: 1px; }
+
+.japanese-item-desc p,
+.english-item-desc p {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 1em; }
 
 body {
   background: #FAFAF3; }
@@ -879,8 +922,7 @@ body {
 
 .ast-header-break-point .main-header-bar
 .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle {
-  top: 0;
-  left: 30px; }
+  right: 65%; }
 
 @media screen and (max-width: 920px) {
   .ast-main-header-bar-alignment {

@@ -33,21 +33,37 @@ jQuery(document).ready(function($) {
       $(".main-header-menu a").removeAttr('style');
     }
   };
-  /* Call the function */
+
   mediaSize();
-  /* Attach the function to the resize event listener */
+
   window.addEventListener('resize', mediaSize, false); 
+
+
 
 // Intro Text fade in
 // Using Waypoints 
 
-  const $trigger = $('.intro-text-container');
+  const $triggerText = $('.intro-text-container');
   const $textToReveal = $('.intro_japanese, .intro_english');
 
-
-  $trigger.waypoint(function () {
+  $triggerText.waypoint(function () {
       $textToReveal.addClass('reveal')
   }, {offset: '40%'});
+
+// Front page Icons fade in
+// Using Waypoints 
+
+  const $triggerIcons = $(".icon-container");
+  const $iconToReveal = $('.icon-links');
+
+$triggerIcons.waypoint(function(direction) {
+  if (direction === 'down'){$iconToReveal.addClass('icon-reveal')
+  }else {
+    $iconToReveal.removeClass("icon-reveal");
+  }
+}, {offset: '30%'});
+
+
 
 
 

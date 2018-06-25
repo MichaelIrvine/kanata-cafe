@@ -20,6 +20,7 @@ $font-serif: 'Unna', serif;
     justify-content: space-between;
     margin: 0;
 
+
     a {
         margin: 2em;
         border-bottom: 1px solid lightgray;
@@ -33,7 +34,6 @@ $font-serif: 'Unna', serif;
 }
 
 
-
 .icon-links {
     display: flex;
     flex-direction: column;
@@ -41,6 +41,9 @@ $font-serif: 'Unna', serif;
     justify-content: center;
     align-items: center;
     margin: 40px;
+    transition: all 1s cubic-bezier(0, 0, 0.57, 1.28);
+    opacity: 0;
+    transform: translateY(10%);
 
     h3 {
         font-family: $font-serif;
@@ -56,4 +59,15 @@ $font-serif: 'Unna', serif;
     &:hover {
         transform: translateY(-5px);
     }
+}
+
+.icon-links:nth-child(2) {transition-delay: 0.1s}
+.icon-links:nth-child(3) {transition-delay: 0.2s}
+.icon-links:nth-child(4) {transition-delay: 0.3s}
+.icon-links:nth-child(5) {transition-delay: 0.4s}
+.icon-links:nth-child(6) {transition-delay: 0.5s}
+
+.icon-reveal {
+    opacity: 1;
+    transform: translateY(0);
 }

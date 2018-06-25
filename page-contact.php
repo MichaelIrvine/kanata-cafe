@@ -61,10 +61,9 @@ $svgIcon   = get_field('map_icon_svg');
 	<div id="google-container"></div>
 	<div id="cd-zoom-in"></div>
 	<div id="cd-zoom-out"></div>
-	<!-- <address>86-90 Paul Street, London, EC2A 4NE</address>  -->
 </section>
 	
-</div>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA_NlAaj4mE1x66SF_JqpH44Rd-MYModw"></script>
 <script>
 	jQuery(document).ready(function($){

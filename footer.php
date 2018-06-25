@@ -50,6 +50,7 @@
 
 	</div> <!-- footer contact -->
 
+
 	<div class="footer-menu">
 		<p class="footer-menu-title">Site Map</p>
 		<?php
